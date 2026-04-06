@@ -30,6 +30,7 @@
 
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="{{asset('public/backend/css/starlight.css')}}">
+    <link rel="stylesheet" href="{{asset('public/backend/css/modern_admin.css')}}">
 
   </head>
 

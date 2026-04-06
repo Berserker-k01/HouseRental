@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Coucher de soleil sur des maisons modernes au Togo">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset=".55" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="300" cy="210" r="100" fill="#fde68a" opacity=".9"/>
+  <rect x="0" y="610" width="1600" height="290" fill="#0f172a" opacity=".45"/>
+  <path d="M120 900 L120 620 L250 520 L390 620 L390 900 Z" fill="#f8fafc"/>
+  <path d="M450 900 L450 640 L560 560 L670 640 L670 900 Z" fill="#e2e8f0"/>
+  <path d="M720 900 L720 600 L860 510 L1000 600 L1000 900 Z" fill="#cbd5e1"/>
+  <path d="M1060 900 L1060 650 L1180 575 L1300 650 L1300 900 Z" fill="#f1f5f9"/>
+  <rect x="173" y="700" width="66" height="120" fill="#334155"/>
+  <rect x="520" y="710" width="66" height="120" fill="#334155"/>
+  <rect x="820" y="690" width="78" height="150" fill="#334155"/>
+  <rect x="1138" y="718" width="62" height="114" fill="#334155"/>
+  <text x="84" y="98" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">Refonte Togolaise</text>
+</svg>

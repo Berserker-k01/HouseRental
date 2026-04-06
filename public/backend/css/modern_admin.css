@@ -1,0 +1,108 @@
+:root {
+  --admin-primary: #c9a227;
+  --admin-secondary: #b3871f;
+  --admin-bg: #f7f3ea;
+  --admin-card: #ffffff;
+  --admin-border: #e6dcc9;
+}
+
+body {
+  background: var(--admin-bg) !important;
+}
+
+.sl-logo,
+.sl-sideleft {
+  background: #111315 !important;
+}
+
+.sl-logo a,
+.menu-item-label,
+.sl-menu-link,
+.sl-menu-link .menu-item-icon {
+  color: #e2e8f0 !important;
+}
+
+.sl-menu-link.active,
+.sl-menu-link:hover {
+  background: rgba(212, 175, 55, 0.18) !important;
+}
+
+.sl-pagebody,
+.sl-mainpanel {
+  background: var(--admin-bg) !important;
+}
+
+.card:not(.bg-primary):not(.bg-info):not(.bg-purple):not(.bg-sl-primary):not(.bg-success):not(.bg-warning):not(.bg-danger),
+.br-section-wrapper,
+.modal-content,
+.table-responsive {
+  background: var(--admin-card) !important;
+  border: 1px solid var(--admin-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* Keep dashboard KPI cards colorful and readable */
+.card.bg-primary,
+.card.bg-info,
+.card.bg-purple,
+.card.bg-sl-primary {
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.22);
+}
+
+.card.bg-primary {
+  background: linear-gradient(135deg, #0f172a, #1f2937) !important;
+}
+
+.card.bg-info {
+  background: linear-gradient(135deg, #0b3b2e, #116149) !important;
+}
+
+.card.bg-purple {
+  background: linear-gradient(135deg, #4b2e14, #7a4b16) !important;
+}
+
+.card.bg-sl-primary {
+  background: linear-gradient(135deg, #9a7a1f, #d4af37) !important;
+}
+
+.btn-primary,
+.btn-info,
+.btn-success {
+  background: linear-gradient(135deg, var(--admin-primary), #e0bf63) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  color: #1a1a1a !important;
+  font-weight: 700;
+}
+
+.btn-danger,
+.btn-warning {
+  border-radius: 999px !important;
+}
+
+.form-control,
+.custom-select,
+select,
+textarea {
+  border-radius: 10px !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.breadcrumb {
+  background: #fff !important;
+  border: 1px solid var(--admin-border);
+  border-radius: 999px;
+}
+
+@media (max-width: 991.98px) {
+  .sl-sideleft {
+    width: 240px !important;
+  }
+
+  .sl-header {
+    padding: 0 10px !important;
+  }
+}

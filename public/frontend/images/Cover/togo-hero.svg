@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Immobilier moderne au Togo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1240" cy="180" r="95" fill="url(#sun)" opacity=".92"/>
+  <path d="M0 650 C250 560 450 710 760 620 C1030 542 1250 680 1600 590 L1600 900 L0 900 Z" fill="#14532d" opacity=".65"/>
+  <path d="M120 900 L120 540 L280 470 L430 560 L430 900 Z" fill="#e2e8f0"/>
+  <rect x="164" y="612" width="44" height="60" fill="#334155"/>
+  <rect x="235" y="612" width="44" height="60" fill="#334155"/>
+  <rect x="164" y="700" width="44" height="60" fill="#334155"/>
+  <rect x="235" y="700" width="44" height="60" fill="#334155"/>
+  <path d="M510 900 L510 500 L640 450 L760 525 L760 900 Z" fill="#cbd5e1"/>
+  <rect x="552" y="620" width="38" height="52" fill="#1f2937"/>
+  <rect x="614" y="620" width="38" height="52" fill="#1f2937"/>
+  <rect x="552" y="700" width="38" height="52" fill="#1f2937"/>
+  <rect x="614" y="700" width="38" height="52" fill="#1f2937"/>
+  <path d="M880 900 L880 560 L1020 500 L1160 560 L1160 900 Z" fill="#f8fafc"/>
+  <rect x="936" y="640" width="44" height="60" fill="#334155"/>
+  <rect x="1020" y="640" width="44" height="60" fill="#334155"/>
+  <rect x="978" y="735" width="66" height="165" fill="#0f172a"/>
+  <text x="88" y="120" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Tedia-investisment</text>
+  <text x="88" y="172" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="30">Investissement & location immobiliere au Togo</text>
+</svg>

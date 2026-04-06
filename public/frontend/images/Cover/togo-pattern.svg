@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Motif moderne inspire du Togo">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <pattern id="p" width="160" height="160" patternUnits="userSpaceOnUse">
+      <rect width="160" height="160" fill="none"/>
+      <circle cx="20" cy="20" r="8" fill="#facc15" opacity=".9"/>
+      <path d="M40 120 L80 50 L120 120 Z" fill="#f8fafc" opacity=".9"/>
+      <rect x="118" y="18" width="26" height="26" rx="4" fill="#fb7185" opacity=".8"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect width="1600" height="900" fill="url(#p)" opacity=".3"/>
+  <path d="M0 820 C300 680 520 860 780 760 C1020 670 1260 850 1600 730 L1600 900 L0 900 Z" fill="#022c22" opacity=".55"/>
+</svg>

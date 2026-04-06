@@ -1,0 +1,1269 @@
+﻿<!----Ekhane FrontEnd tar full OUTPUT show ache,"Top Header+Footer" + 'NAV' + "yield(content)" Code ache --->
+
+
+<!----Ekhane FrontEnd tar ekdom "Top Header" then "yield(content)" && Footer tar Code ache --->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<title>Tedia-investisment — Investissement & location</title>
+<meta charset="utf-8">
+
+<!----------this for ajax ----------->
+<meta name="csrf" value="hoLL3GnISEOr9y4N5Xh7B4zHPOqO0uTFnvoKmOkW">       <!----------this for ajax ----------->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Tedia-investisment — immobilier au Togo (FCFA). Investissement et location.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="http://127.0.0.1:9080/public/frontend/logo/logo3.jpg" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9080/public/frontend/styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9080/public/frontend/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9080/public/frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9080/public/frontend/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9080/public/frontend/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9080/public/frontend/plugins/slick-1.8.0/slick.css">
+
+<link rel="stylesheet" href="http://127.0.0.1:9080/public/frontend/plugins/aos.css">
+
+<link rel="stylesheet" href="http://127.0.0.1:9080/public/backend/css/toastr.min.css">
+
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9080/public/frontend/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9080/public/frontend/styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9080/public/frontend/styles/newstyle.css">
+
+</head>
+
+<body>
+
+    <div class="super_container">
+
+    <!-- Header -->
+    <header class="header smooth-scroll" id="home">
+
+
+
+
+<div class="top_bar">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex flex-row">
+                <!--class=top_bar_contact_item(rm)-->
+                <div class="more moreApp mt-2 "><div class="top_bar_icon"><a href="http://127.0.0.1:9080" class="button-pipaluk button--inverted px-2"> <img src="http://127.0.0.1:9080/public/frontend/logo/logo3.jpg" class="img-fluid rounded-circle" width="65px" height="65px"> <span class="text-primary h5" >Tedia-investisment<small style="font-size:12px">.com</small></span></a></div></div>
+
+                <div class="top_bar_contact_item mx-5" title="Nous appeler"><i class="fa fa-phone pr-1"></i><a href="tel:" style="color:black">  </a></div>
+
+                <div class="top_bar_contact_item" title="Nous écrire"><i class="far fa-envelope pr-1"></i><a href="mailto:" style="color:black">  </a></div>
+
+
+
+                <div class="top_bar_content ml-auto">
+
+<!----User login/Register----->
+                    <div class="top_bar_user">
+                                                    <div class="more moreApp"><a href="http://127.0.0.1:9080/login" class="button-pipaluk button--inverted px-4 py-2" style="font-size:16px; color:black;">
+                                <div class="user_icon"><img src="http://127.0.0.1:9080/public/frontend/images/user.svg"></div>
+                                Inscription / Connexion
+                                </a>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header Main -->
+
+<div class="header_main" style="height: 128px;">
+    <div class="container">
+        <div class="row">
+
+            <!-- Logo -->
+            <div class="col-lg-2 col-sm-3 col-3 order-1" data-aos="fade-up-right">
+                <div class="logo_container">
+                <div class="logo">
+                    <a href="http://127.0.0.1:9080" class="text-primary">
+                            Tedia-investisment
+                    </a>
+                </div>
+                </div>
+            </div>
+
+
+
+
+<!-------------- Search ----------------->
+    <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+        <div class="header_search">
+            <div class="header_search_content" style="left: 81px;">
+                <div class="header_search_form_container">
+                    <form action="http://127.0.0.1:9080/property/search" class="header_search_form clearfix" method="GET">
+                        <input type="hidden" name="_token" value="hoLL3GnISEOr9y4N5Xh7B4zHPOqO0uTFnvoKmOkW">                        <input type="search" required="required" class="header_search_input" placeholder="Ville, région ou code bien…" name="search">
+                        <div class="custom_dropdown">
+                            <div class="custom_dropdown_list">
+                                <span class="custom_dropdown_placeholder clc">Toutes les villes</span>
+                                <i class="fas fa-chevron-down"></i>
+                                <ul class="custom_list clc">
+                                                                            <li><a class="clc" href="http://127.0.0.1:9080/city/properties/1">Lomé</a></li>
+                                                                            <li><a class="clc" href="http://127.0.0.1:9080/city/properties/2">Kara</a></li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                        <button type="submit" class="header_search_button trans_300" value="Submit"><img src="http://127.0.0.1:9080/public/frontend/images/search.png" alt=""></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------ Wishlist ------------------->
+            <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                                        
+
+                    <!-- Cart -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+
+
+            <!-- Main Navigation -->
+
+
+
+    <!-----Ekkhane Frontend er Navbar + nav er sathe joint 'Main-Slide' ta royeche ---->
+<nav class="main_nav py-0 my-0">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="main_nav_content d-flex flex-row">
+
+                    <!-- Categories Menu -->
+
+                    <div class="cat_menu_container">
+                        <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
+                            <div class="cat_burger"><span></span><span></span><span></span></div>
+                            <div class="cat_menu_text" style="">Choisir une zone</div>
+                            
+                        </div>
+
+
+                        <ul class="cat_menu pb-2 pt-2">
+                                                    <li class="hassubs more moreNav">
+                                <a href="http://127.0.0.1:9080/city/properties/1" class="button-pipaluk button--inverted pl-5">Lomé<i class="fas fa-arrow-circle-right pr-3"></i></a> <!--button-pipaluk button--inverted px-5 my-1-->
+                                <ul class="py-1">
+                                                                                                        </ul>
+                            </li>
+                                                    <li class="hassubs more moreNav">
+                                <a href="http://127.0.0.1:9080/city/properties/2" class="button-pipaluk button--inverted pl-5">Kara<i class="fas fa-arrow-circle-right pr-3"></i></a> <!--button-pipaluk button--inverted px-5 my-1-->
+                                <ul class="py-1">
+                                                                                                        </ul>
+                            </li>
+                                            </ul>
+                </div>
+
+
+
+                    <!-- Main Nav Menu -->
+
+                    <div class="main_nav_menu ml-auto">
+                        <ul class="standard_dropdown main_nav_dropdown">
+
+                            <li><a href="http://127.0.0.1:9080">Accueil</a></li>
+
+
+                            <li><a href="http://127.0.0.1:9080/blog/post">Blog</a></li>
+                            <li><a href="#contact_nav">Contact</a></li>
+                            <li><a href="#">À propos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Menu Trigger -->
+
+                    <div class="menu_trigger_container ml-auto">
+                        <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+                            <div class="menu_burger">
+                                <div class="menu_trigger_text">Menu</div>
+                                <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!--------------- Menu mobile screen------------>
+
+<div class="page_menu">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="page_menu_content">
+
+                    <div class="page_menu_search">
+                        <form action="http://127.0.0.1:9080/property/search" method="GET">
+                            <input type="hidden" name="_token" value="hoLL3GnISEOr9y4N5Xh7B4zHPOqO0uTFnvoKmOkW">                            <input type="search" required="required" class="page_menu_search_input" placeholder="Rechercher un bien…" name="search">
+                        </form>
+                    </div>
+                    <ul class="page_menu_nav">
+                        <li class="page_menu_item"><a href="http://127.0.0.1:9080">Accueil</a></li>
+                        <li class="page_menu_item"><a href="http://127.0.0.1:9080/blog/post">Blog</a></li>
+                        <li class="page_menu_item"><a href="#contact_nav">Contact</a></li>
+                    </ul>
+
+                    <div class="menu_contact">
+                        <div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>+38 068 005 3570</div>
+                        <div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="https://colorlib.com/cdn-cgi/l/email-protection#fd9b9c8e898e9c91988ebd9a909c9491d39e9290"><span class="__cf_email__" data-cfemail="5f393e2c2b2c3e333a2c1f38323e3633713c3032">[email&#160;protected]</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</header>
+
+
+ <!---------------------------Main Slider-Carousal-(Nav) --------------------------->
+
+<section id="showcase">
+    <div id="slider" class="carousel slide" data-ride="carousel"> <!--.carousel-fade-->
+      <ol class="carousel-indicators">
+         <li class="active" data-target="#slider" data-slide-to="0"></li>
+         <li data-target="#slider" data-slide-to="1"></li>
+         <li data-target="#slider" data-slide-to="2"></li>
+      </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-img-1 active">
+            <div class="container">
+                <div class="col-lg-8 offset-lg-4 pt-5" data-aos="flip-right">
+                    <div class="shadow-lg rounded" style=" background:#AC5488; opacity: .8">
+                        <h1 class="text-light p-3" style="">Tedia-investisment — biens à vendre ou à louer au Togo</h1>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-img-2">
+             <div class="container">
+                <div class="col-lg-8 offset-lg-4 pt-5">
+                <div class="shadow-lg rounded" style="background:#AC5488; opacity: .8">
+                    <h1 class="text-light p-3" style="">Tedia-investisment — biens à vendre ou à louer au Togo</h1>
+                </div>
+                </div>
+               </div>
+               </div>
+               <div class="carousel-item carousel-img-3">
+                  <div class="container">
+                      <div class="col-lg-8 offset-lg-4 pt-5">
+                        <div class="shadow-lg rounded" style=" background:#AC5488; opacity: .8">
+                            <h1 class="text-light p-3" style="">Tedia-investisment — biens à vendre ou à louer au Togo</h1>
+                        </div>
+                    </div>
+                    </div>
+               </div>
+          </div>
+          <a href="#slider" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a href="#slider" class="carousel-control-next" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+          </a>
+      </div>
+  </section>
+
+
+<script src="http://127.0.0.1:9080/public/frontend/js/jquery.min.js"></script>   <!--f_Ajx--->
+
+
+<!---------------------- Start 'Deals of the week'(hot_new_arrival)---------------------------->
+
+<!-----'Deals of the week' ------>
+<div class="deals_featured">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex flex-lg-row flex-column align-items-center justify-content-start">
+
+                <!-- Deals -->
+
+                <div class="deals">
+                    <div class="deals_title">New arrival</div>
+                    <div class="deals_slider_container">
+
+                        <!-- Deals Slider -->
+                        <div class="owl-carousel owl-theme deals_slider">
+<!---------------------------------------------------------------->
+                    
+                        </div>
+
+                    </div>
+
+                    <div class="deals_slider_nav_container">
+                        <div class="deals_slider_prev deals_slider_nav"><i class="fas fa-chevron-left ml-auto"></i></div>
+                        <div class="deals_slider_next deals_slider_nav"><i class="fas fa-chevron-right ml-auto"></i></div>
+                    </div>
+                </div>
+    <!----------//-----//------ End of 'Deals of the Weak' -----------//-----------//-------->
+
+
+
+
+
+<!-----------------------Start 'Featured'------------------------------>
+
+    <!------ Featured ------>
+                <div class="featured">
+                    <div class="tabbed_container">
+                        <div class="tabs">
+                            <ul class="clearfix">
+                                <li class="active">À la une</li>
+                                <li>À vendre</li>
+                                <li>À louer</li>
+                            </ul>
+                            <div class="tabs_line"><span></span></div>
+                        </div>
+
+                        <!-- Product Panel -->
+                        <div class="product_panel panel active">
+                            <div class="featured_slider slider pb-5 mb-5">
+
+<!---------------------------------------------------------------->
+                            
+                            </div>
+                            <div class="featured_slider_dots_cover"></div>
+                        </div>
+
+<!-------------//--------------End Featured property-------------//-----------------//------------>
+
+
+
+<!---------------------------Start Sale(property)----------------------------------------------------------->
+
+            <!-- Product Panel -->
+
+            <div class="product_panel panel">
+                <div class="featured_slider slider pb-5 mb-5">
+
+                    <!-- Slider Item -->
+<!---------------------------------------------------------------->
+                        
+                    </div>
+                    <div class="featured_slider_dots_cover"></div>
+                </div>
+<!----------//------------------End Sale(property)--------------//-------------//---------->
+
+
+
+<!------------------------Start Rent(property)-------------------------------------------------------------->
+            <!-- Product Panel -->
+
+            <div class="product_panel panel">
+                <div class="featured_slider slider pb-5 mb-5">
+
+                    <!-- Slider Item -->
+<!---------------------------------------------------------------->
+                    
+
+                </div>
+                <div class="featured_slider_dots_cover"></div>
+            </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>      <!--------------- End of "Rent(property)" ------------------>
+
+<!---------------//------------ End of "Deals of the Week" -------------------------------------->
+
+
+
+
+
+
+<!------------------------------------------------------------------------------------------------------------>
+                                    <!-----Start Best Rated------>
+<!------------------------------------------------------------------------------------------------------------>
+
+<div class="trends">
+    <div class="trends_background"></div>
+    <div class="trends_overlay"></div>
+    <div class="container">
+        <div class="row">
+
+            <!-- Trends Content -->
+            <div class="col-lg-3">
+                <div class="trends_container">
+                    <h2 class="trends_title text-light">Biens les mieux notés</h2>
+                    <div class="trends_text"><p style="color: white">Découvrez les annonces les plus appréciées en un seul endroit.</p></div>
+                    <div class="trends_slider_nav">
+                        <div class="trends_prev trends_nav" title="Previous"><i class="fas fa-angle-left ml-auto"></i></div>
+                        <div class="trends_next trends_nav" title="Next"><i class="fas fa-angle-right ml-auto"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trends Slider -->
+            <div class="col-lg-9">
+                <div class="trends_slider_container">
+
+                    <!-- Trends Slider -->
+                    <div class="owl-carousel owl-theme trends_slider">
+
+    <!-------------------------------------------------------------------->
+                        <!-- Trends Slider Item -->
+                    
+                </div>
+            </div>
+        </div>  <!--col-->
+
+    </div>  <!--row-->
+</div>  <!--container-->
+</div>
+
+<!--------//------------//----------//---------End Best Rated----------//------------//-------------//------------>
+
+
+
+
+
+
+
+<!---------------------------------------------------------------------------------------------------->
+                            <!--- for Showing 'Chittagong' City (1st place) --->
+<!---------------------------------------------------------------------------------------------------->
+<!----------------------------------Start Featured(chattogram) Property-------------------------------------------->
+
+<div class="hot_arrivals">
+    <div class="new_arrivals">
+        <div class="container">
+            <div class="row pl-5">
+                <div class="col">
+                    <div class="tabbed_container">
+                        <div class="tabs clearfix tabs-right">
+                            <div class="new_arrivals_title">Annonces — Lomé</div>
+                            <ul class="clearfix">
+                                <li class="active">À la une</li>
+                                <li>À vendre</li>
+                                <li>À louer</li>
+                            </ul>
+                            <div class="tabs_line" style="border: 1px solid green; margin-bottom: 25px;"><span></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12" style="z-index:1;">
+
+                                <!-- Product Panel -->
+                                <div class="product_panel panel active">
+                                    <div class="arrivals_slider slider pb-4 mb-4">
+
+<!---------------------------------------------------------------->
+                                    
+                                    </div>
+                                    <div class="featured_slider_dots_cover"></div>
+                                </div>
+
+        <!-------------//--------------End Featured(chattogram) property-------------//-----------------//------------>
+
+
+
+<!---------------------------------Start Sale(chattogram)---------------------------------->
+
+                            <!-- Product Panel -->
+                            <div class="product_panel panel">
+                                <div class="arrivals_slider slider pb-4 mb-4">
+
+<!-------------------------------------------------------------------->
+                                
+                                </div>
+                                <div class="featured_slider_dots_cover"></div>
+                            </div>
+
+
+
+<!----------------------------Start Rent(chattogram)------------------------------------------------------------------>
+
+                            <!-- Product Panel -->
+                            <div class="product_panel panel">
+                                <div class="arrivals_slider slider pb-4 mb-4">
+
+<!-------------------------------------------------------------------->
+                                
+                                </div>
+                                <div class="featured_slider_dots_cover"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-----------------------------------------End of Showing 'Chittagong' City (1st place)-------------------------------------->
+
+
+
+
+
+
+
+
+<!---------------------------start "Popular Categories" -------------------------------------->
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------------------------------------------>
+                                    <!-----Start Trends------>
+<!------------------------------------------------------------------------------------------------------------>
+
+<div class="trends">
+    <div class="trends_background"></div>
+    <div class="trends_overlay"></div>
+    <div class="container">
+        <div class="row">
+
+            <!-- Trends Content -->
+            <div class="col-lg-3">
+                <div class="trends_container">
+                    <h2 class="trends_title text-light">Tendances</h2>
+                    <div class="trends_text"><p style="color: white">Les biens qui attirent le plus l’attention, regroupés pour vous.</p></div>
+                    <div class="trends_slider_nav">
+                        <div class="trends_prev trends_nav" title="Previous"><i class="fas fa-angle-left ml-auto"></i></div>
+                        <div class="trends_next trends_nav" title="Next"><i class="fas fa-angle-right ml-auto"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trends Slider -->
+            <div class="col-lg-9">
+                <div class="trends_slider_container">
+
+                    <!-- Trends Slider -->
+                    <div class="owl-carousel owl-theme trends_slider">
+
+    <!-------------------------------------------------------------------->
+                        <!-- Trends Slider Item -->
+                    
+                </div>
+            </div>  <!--col-->
+        </div> <!--row-->
+
+    </div> <!--container-->
+</div>
+</div>
+
+<!--------//------------//----------//---------End Trends----------//------------//-------------//------------>
+
+
+
+
+
+
+<!---------------------------------------------------------------------------------------------------->
+                            <!--- for Showing 'Dhaka' City (2nd placed City) --->
+<!---------------------------------------------------------------------------------------------------->
+<!----------------------------------Start Featured(Dhaka) Property-------------------------------------------->
+
+<div class="hot_arrivals">
+    <div class="new_arrivals">
+        <div class="container">
+            <div class="row pl-5">
+                <div class="col">
+                    <div class="tabbed_container">
+                        <div class="tabs clearfix tabs-right">
+                            <div class="new_arrivals_title">Annonces — Kara</div>
+                            <ul class="clearfix">
+                                <li class="active">À la une</li>
+                                <li>À vendre</li>
+                                <li>À louer</li>
+                            </ul>
+                            <div class="tabs_line" style="border: 1px solid green; margin-bottom: 25px;"><span></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12" style="z-index:1;">
+
+                                <!-- Product Panel -->
+                                <div class="product_panel panel active">
+                                    <div class="arrivals_slider slider pb-4 mb-4">
+
+<!---------------------------------------------------------------->
+                                    
+                                    </div>
+                                    <div class="featured_slider_dots_cover"></div>
+                                </div>
+
+        <!-------------//--------------End Featured(Dhaka) property(2nd placed City)-------------//-----------------//------------>
+
+
+
+<!---------------------------------Start Sale(Dhaka)---------------------------------->
+
+                            <!-- Product Panel -->
+                            <div class="product_panel panel">
+                                <div class="arrivals_slider slider pb-4 mb-4">
+
+<!-------------------------------------------------------------------->
+                                
+                                </div>
+                                <div class="featured_slider_dots_cover"></div>
+                            </div>
+
+
+
+<!----------------------------Start Rent(Dhaka)------------------------------------------------------------------>
+
+                            <!-- Product Panel -->
+                            <div class="product_panel panel">
+                                <div class="arrivals_slider slider pb-4 mb-4">
+
+<!-------------------------------------------------------------------->
+                                
+                                </div>
+                                <div class="featured_slider_dots_cover"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-----------------------------------------End of Showing 'Dhaka'(2st placed City)-------------------------------------->
+
+
+
+
+
+
+
+
+
+        <!------------------------------------Stats // We Deliver Services------------------------------------>
+ <section id="stats">
+    <div class="container-box-md py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="vertical-heading">
+                        <h2>We Deliver <br /> <strong>Excellent</strong> Services</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row wow">
+                <div class="col-md-3 col-sm-6 col-6">
+                    <!--stats-item 01-->
+                    <div class="stats-item text-center">
+                        <i class="far fa-chart-bar"></i>
+                        <h3 class="counter">0</h3>
+                        <p>Years Experiance</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <!--stats-item 02-->
+                    <div class="stats-item text-center">
+                        <i class="fab fa-codepen"></i>
+                        <h3 class="counter">0</h3>
+                        <p>Project Done</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <!--stats-item 03-->
+                    <div class="stats-item text-center">
+                        <i class="fas fa-trophy"></i>
+                        <h3 class="counter">0</h3>
+                        <p>Awards Received</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <!--stats-item 04-->
+                    <div class="stats-item text-center">
+                        <i class="fa fa-users"></i>
+                        <h3 class="counter">0</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--------End stats // we deliver services---------------->
+
+
+
+
+
+
+<!----------------------------------------Start Reviews----------------------------------------------->
+
+<div class="reviews" style="background-color: #EFF6FA">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="reviews_title_container">
+                    <h3 class="reviews_title">Derniers avis</h3>
+                    <div class="reviews_all ml-auto"><a href="#">view all <span>reviews</span></a></div>
+                </div>
+
+                <div class="reviews_slider_container">
+                    <!-- Reviews Slider -->
+                    <div class="owl-carousel owl-theme reviews_slider">
+
+                        <!-- Reviews Slider Item -->
+                                            </div>
+                    <div class="reviews_dots"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------//--------------//-------------Ends Review---------------//------------//---------->
+
+
+
+
+
+
+
+
+<!-------------------------------Clients----------------------------->
+<section id="clients">
+    <div class="container-box-sm py-5">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="horizontal-heading text-center">
+                        <h4 style="color: #F4C613">Satisfied Clients <br></h4>
+                        <h1>Our Happy Clients</h1>
+                        <div class="line mt-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="clients-details" class="owl-carousel owl-theme">
+                        <!--clients 01-->
+                        <div class="clients">
+                            <img src="http://127.0.0.1:9080/public/frontend/images/client/client-1.png" alt="clients" class="img-fluid">
+                        </div>
+                        <!--clients 02-->
+                        <div class="clients">
+                            <img src="http://127.0.0.1:9080/public/frontend/images/client/client-2.png" alt="clients" class="img-fluid">
+                        </div>
+                        <!--clients 03-->
+                        <div class="clients">
+                            <img src="http://127.0.0.1:9080/public/frontend/images/client/client-3.png" alt="clients" class="img-fluid">
+                        </div>
+                        <!--clients 04-->
+                        <div class="clients">
+                            <img src="http://127.0.0.1:9080/public/frontend/images/client/client-4.png" alt="clients" class="img-fluid">
+                        </div>
+                        <!--clients 05-->
+                        <div class="clients">
+                            <img src="http://127.0.0.1:9080/public/frontend/images/client/client-5.png" alt="clients" class="img-fluid">
+                        </div>
+                        <!--clients 06-->
+                        <div class="clients">
+                            <img src="http://127.0.0.1:9080/public/frontend/images/client/client-6.png" alt="clients" class="img-fluid">
+                        </div>
+                        <!--clients 07-->
+                        <div class="clients">
+                            <img src="http://127.0.0.1:9080/public/frontend/images/client/client-7.png" alt="clients" class="img-fluid">
+                        </div>
+                        <!--clients 08-->
+                        <div class="clients">
+                            <img src="http://127.0.0.1:9080/public/frontend/images/client/client-8.png" alt="clients" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--------//-----------//----------Clients_Ends---------//-----------//-------------//----------//------------>
+
+
+
+
+
+
+
+
+<!-------------------------------------- Newsletter ------------------------------------------->
+<div class="newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
+                    <div class="newsletter_title_container">
+                        <div class="newsletter_icon"><img src="http://127.0.0.1:9080/public/frontend/images/send.png" alt=""></div>
+                        <div class="newsletter_title">Inscrivez-vous à la newsletter</div>
+                        <div class="newsletter_text"><p>… et recevez nos actualités.</p></div>
+                    </div>
+                    <div class="newsletter_content clearfix">
+                        <form action="http://127.0.0.1:9080/store/newsletters" class="newsletter_form" method="post">
+                            <input type="hidden" name="_token" value="hoLL3GnISEOr9y4N5Xh7B4zHPOqO0uTFnvoKmOkW">                            <input type="email" class="newsletter_input" required="required" placeholder="Votre adresse e-mail" name="email">
+                            <button class="newsletter_button" type="submit">S’inscrire</button>
+                        </form>
+                        <div class="newsletter_unsubscribe_link"><a href="">Se désinscrire</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------//-------------//-----------//-----End Newsletter-----------//------------//-------------//------------>
+
+
+
+
+
+
+<!----------------------------------------- FAQ ---------------------------------------------------->
+<div id="accordion" role="tablist" class="bg-dark py-5 text-light text-center ">
+    <div class="container py-4">
+        <div class="row text-center">
+            <div class="col">
+                <h2 class="mb-0">Questions fréquentes</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+        <div class="col-md-12">
+
+            <div class="card bg-light text-dark my-2">
+                <div class="card-header text-primary" role="tab">
+                    <h4 class="mb-0">
+                    <div data-toggle="collapse" href="#questionOne"><i class="fa fa-arrow-circle-down pr-2"></i>Comment publier une annonce (vente ou location) ?</div>
+                    </h4>
+                </div>
+                <div class="collapse" id="questionOne" data-parent="#accordion">
+                    <div class="card-body text-left">
+                    <p class="mb-0">
+                        <ol class="offset-md-3 text-muted" style="font-size: 15px; word-spacing: 4px">
+                            <li>Connectez-vous à votre compte, puis ouvrez votre page profil.</li>
+                            <li>Choisissez « Publier une annonce » dans le menu.</li>
+                            <li>Remplissez le formulaire (caractéristiques du bien, conditions, etc.).</li>
+                            <li>Ajoutez des photos de qualité.</li>
+                            <li>Réglez les frais de publication le cas échéant (selon les paramètres du site).</li>
+                            <li>Plus votre annonce est détaillée, plus elle sera visible pour les acheteurs ou locataires.</li>
+                            <li>Vérifiez l’aperçu avant validation.</li>
+                            <li>Validez pour soumettre votre annonce à modération.</li>
+                        </ol>
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="card bg-light text-dark my-2">
+                <div class="card-header text-primary" role="tab">
+                    <h4 class="mb-0">
+                    <div data-toggle="collapse" href="#questionThree"><i class="fa fa-arrow-circle-down pr-2"></i>Comment nous faire part de vos retours ?</div>
+                    </h4>
+                </div>
+                <div class="collapse" id="questionThree" data-parent="#accordion">
+                    <div class="card-body">
+                    <p class="mb-0" style="font-size: 15px">Vos suggestions nous aident à améliorer la plateforme. Écrivez-nous à <a href="mailto:">  </a> ou <a href="mailto:">  </a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-light text-dark my-2">
+                <div class="card-header text-primary" role="tab">
+                    <h4 class="mb-0">
+                    <div data-toggle="collapse" href="#questionFour"><i class="fa fa-arrow-circle-down pr-2"></i>Comment suis-je informé d’un intérêt pour mon bien ?</div>
+                    </h4>
+                </div>
+                <div class="collapse" id="questionFour" data-parent="#accordion">
+                    <div class="card-body">
+                    <p class="mb-0" style="font-size: 15px; word-spacing: 2px">Les visiteurs peuvent vous contacter via le formulaire du site : vous recevez une notification par e-mail et les demandes apparaissent dans votre espace. Votre adresse e-mail n’est pas affichée publiquement.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+</div>
+<!------------//-------------//----------//-------End_FAQ-----------//----------//-----------//------------->
+
+
+
+
+
+
+<!--------//-----------//------------//----------//-------------//-----------//------------//-----------//----------->
+                                <!----------------- END ---------------->
+<!--------//-----------//------------//----------//-------------//-----------//------------//-----------//----------->
+
+
+
+
+
+
+<!--------------------------(JS Code)--------------------------------------->
+
+
+<script>
+$(function () {
+    $("#clients-details").owlCarousel({
+        items: 6,
+        autoplay: true,
+        smartSpeed: 500,
+        loop: true,
+        dots: true,
+        nav: false,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        responsive: {
+            // breakpoint from 0 up
+            0: {
+                items: 2
+            },
+            // breakpoint from 480 up
+            480: {
+                items: 3
+            },
+            // breakpoint from 768 up
+            768: {
+                items: 6
+            }
+        }
+
+    });
+});
+</script>
+
+ <!----------------------------------------------------------->
+
+
+
+
+
+
+
+    <!--------------------- Contact/Get in Touch ----------------------->
+    <section id="contact">
+        <div class="container-box-md" id="contact_nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--contact left-->
+                        <div id="contact-left">
+                            <div class="vertical-heading">
+                                <h5>Qui sommes-nous</h5>
+                                <h2 style="color: blue"><b>Contactez-<br><strong>nous</strong></b></h2>
+                                <p style="font-size: 15px">Une question ? Appelez-nous 24h/24 et 7j/7</p>
+                            </div>
+
+                            <div id="branch">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="branch">
+                                            <h4 style="color: blue">Agence — zone 1</h4>
+                                            <ul class="brance-details">
+                                                <li><i class="fa fa-phone"></i><a href="tel:" style="color:black">  </a></li>
+                                                <li><i class="far fa-envelope"></i><a href="mailto:" style="color:black">  </a></li>
+                                                <li><i class="fas fa-map-marker-alt"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="branch">
+                                            <h4 style="color: blue">Agence — zone 2</h4>
+                                            <ul class="brance-details">
+                                                <li><i class="fa fa-phone"></i><a href="tel:" style="color:black">  </a></li>
+                                                <li><i class="far fa-envelope"></i><a href="mailto:" style="color:black">  </a></li>
+                                                <li><i class="fas fa-map-marker-alt"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <ul class="social-links">
+                                    <li title="Facebook"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                    <li title="LinkedIn"><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li title="Twitter"><a href=""><i class="fab fa-twitter"></i></a></li>
+                                    <li title="YouTube"><a href=""><i class="fab fa-youtube"></i></a></li>
+                                    <li title="Instagram"><a href=""><i class="fab fa-instagram"></i></a></li>
+                                    <li title="Pinterest"><a href=""><i class="fab fa-pinterest"></i></a></li>
+                                    <li title="WhatsApp"><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+<div class="col-md-6">
+
+    <!--contact right-->
+    <div id="contact-right">
+        <form action="http://127.0.0.1:9080/store/contact" method="post">
+                <input type="hidden" name="_token" value="hoLL3GnISEOr9y4N5Xh7B4zHPOqO0uTFnvoKmOkW">            <h4 style="color: blue">Envoyer un message</h4>
+            <p>Écrivez-nous à tout moment, nous vous répondrons dès que possible.</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Nom" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Adresse e-mail" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="phone" placeholder="Téléphone" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" placeholder="Objet">
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" rows="3" cols="4" name="message" placeholder="Votre message" required></textarea>
+            </div>
+
+            <div id="submit-btn" class="more">
+                <button class="btn bg-transparent btn-block text-light button-pipaluk button--inverted" style="font-size: 17px; padding:8px;" role="button">Envoyer</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!---------------------------------Ends_Contact-------------------------------->
+
+
+
+    <!--footer2-->
+    <div class=" footer2 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        &copy; 2026 Tedia-investisment — Tous droits réservés.
+                    </p>
+                    <a href="http://127.0.0.1:9080/terms/privacy" class="text-light small" style="opacity: .7">Mentions légales & confidentialité</a>
+                </div>
+            </div>
+        </div>
+
+        <!---------back to top---------->
+        <a href="#home" id="back-to-top" class="btn btn-primary" title="Haut de page" role="button">
+            <i class="fa fa-angle-up"></i>
+        </a>
+
+    </div>
+    <!--footer Ends-->
+
+
+
+
+<!---------//-----------//------------//------------//--------------//------------//--------------//----------//-------->
+
+
+
+
+<!----------- for applying ajax in wishlist -------------->
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    <!---   OR----////------>
+    <script src="http://127.0.0.1:9080/public/frontend/js/jquery.min.js"></script>
+
+
+
+<!--=====================================================
+        *------Featured_Modal_(Call & Email)-------*
+======================================================--->
+
+<!------------------Start_Modal_(Call)---------------------->
+<!------------------End_Modal_(Call)---------------------->
+
+
+<!------------------Start_Modal_(Email)---------------------->
+<!------------------End_Modal_(Email)_Featured---------------------->
+
+
+
+
+
+
+<!-------------------------------------JS files--------------------------------------------------->
+<script src="http://127.0.0.1:9080/public/frontend/js/jquery-3.3.1.min.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/styles/bootstrap4/popper.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/plugins/greensock/TweenMax.min.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/plugins/greensock/TimelineMax.min.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/plugins/greensock/animation.gsap.min.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/plugins/slick-1.8.0/slick.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/plugins/easing/easing.js"></script>
+<!----------newly added-------->
+<script src="http://127.0.0.1:9080/public/frontend/js/jquery.nicescroll.min.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/js/aos.js"></script>
+
+<!-----------//for ajax //-------->
+
+<script src="http://127.0.0.1:9080/public/frontend/js/sweetalert2@8.js"></script>
+
+<script src="http://127.0.0.1:9080/public/frontend/js/sweetalert.min.js"></script>
+
+<script src="http://127.0.0.1:9080/public/backend/js/toastr.min.js"></script>
+<script src="http://127.0.0.1:9080/public/frontend/js/custom.js"></script>
+
+
+
+
+
+<!-------------------------JS for Wishlist_(ajax)-------------------------->
+<script type="text/javascript">
+    $(document).ready(function() {
+          $('.addwishlist').on('click', function(){     //--from add_to_'wishlist' button/name //-->(.addwishlist)
+            var id = $(this).data('id');
+            if(id) {
+               $.ajax({
+                   url: "http://127.0.0.1:9080/add/wishlist/"+id,
+                   type:"GET",
+                   dataType:"json",
+                   success:function(data) {
+                     const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000
+                      })
+
+                     if($.isEmptyObject(data.error)){
+                          Toast.fire({
+                            type: 'success',
+                            title: data.success
+                          })
+                     }else{
+                           Toast.fire({
+                              type: 'error',
+                              title: data.error
+                          })
+                     }
+                   },
+               });
+           } else {
+               alert('danger');
+           }
+            e.preventDefault();
+       });
+   });
+</script>
+
+
+
+<!--------------------- Toastr --------------------->
+<script>
+    </script>
+
+
+<!--==================================
+        ----Nice Scroll bar----
+====================================--->
+    <script>
+        $(function() {
+        $("body").niceScroll({
+        cursorborder: "1px solid yellow",
+        });
+    });
+    </script>
+    <!-- eta "Nice Scroll bar" er jquery code -->
+
+
+<!--==================================
+        ----AOS----
+====================================--->
+    <script>
+        AOS.init({
+            duration: 1300
+        });
+    </script>
+    <!-- eta "AOS" er jquery code -->
+
+
+<!--==================================
+        -----back-to-top------
+======================================--->
+<script>
+//show and hide white nav
+$(function () {
+
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() > 80) {
+        //show back top button
+        $("#back-to-top").fadeIn();
+    }else {
+        //hide back top button
+        $("#back-to-top").fadeOut();
+    }
+});
+});
+</script>
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-23581568-13');
+</script>
+
+
+
+</body>
+</html>
+

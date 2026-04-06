@@ -1640,61 +1640,7 @@
 
 
 
-<!-------------------------------Clients----------------------------->
-<section id="clients">
-    <div class="container-box-sm py-5">
-        <div class="container pb-5">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="horizontal-heading text-center">
-                        <h4 style="color: #F4C613">Satisfied Clients <br></h4>
-                        <h1>Our Happy Clients</h1>
-                        <div class="line mt-3"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="clients-details" class="owl-carousel owl-theme">
-                        <!--clients 01-->
-                        <div class="clients">
-                            <img src="{{asset('public/frontend/images/client/client-1.png')}}" alt="clients" class="img-fluid">
-                        </div>
-                        <!--clients 02-->
-                        <div class="clients">
-                            <img src="{{asset('public/frontend/images/client/client-2.png')}}" alt="clients" class="img-fluid">
-                        </div>
-                        <!--clients 03-->
-                        <div class="clients">
-                            <img src="{{asset('public/frontend/images/client/client-3.png')}}" alt="clients" class="img-fluid">
-                        </div>
-                        <!--clients 04-->
-                        <div class="clients">
-                            <img src="{{asset('public/frontend/images/client/client-4.png')}}" alt="clients" class="img-fluid">
-                        </div>
-                        <!--clients 05-->
-                        <div class="clients">
-                            <img src="{{asset('public/frontend/images/client/client-5.png')}}" alt="clients" class="img-fluid">
-                        </div>
-                        <!--clients 06-->
-                        <div class="clients">
-                            <img src="{{asset('public/frontend/images/client/client-6.png')}}" alt="clients" class="img-fluid">
-                        </div>
-                        <!--clients 07-->
-                        <div class="clients">
-                            <img src="{{asset('public/frontend/images/client/client-7.png')}}" alt="clients" class="img-fluid">
-                        </div>
-                        <!--clients 08-->
-                        <div class="clients">
-                            <img src="{{asset('public/frontend/images/client/client-8.png')}}" alt="clients" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--------//-----------//----------Clients_Ends---------//-----------//-------------//----------//------------>
+<!-- Section "Happy Clients" removed for the premium redesign -->
 
 
 
@@ -1830,38 +1776,6 @@
 
 
 <!--------------------------(JS Code)--------------------------------------->
-
-{{--/*==================================
-            clients
-====================================*/ --}}
-<script>
-$(function () {
-    $("#clients-details").owlCarousel({
-        items: 6,
-        autoplay: true,
-        smartSpeed: 500,
-        loop: true,
-        dots: true,
-        nav: false,
-        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-        responsive: {
-            // breakpoint from 0 up
-            0: {
-                items: 2
-            },
-            // breakpoint from 480 up
-            480: {
-                items: 3
-            },
-            // breakpoint from 768 up
-            768: {
-                items: 6
-            }
-        }
-
-    });
-});
-</script>
 
  <!----------------------------------------------------------->
 

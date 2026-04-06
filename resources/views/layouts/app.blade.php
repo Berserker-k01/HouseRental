@@ -32,6 +32,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('public/frontend/styles/main_styles.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('public/frontend/styles/responsive.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('public/frontend/styles/newstyle.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('public/frontend/styles/modern_overrides.css')}}">
 
 </head>
 
@@ -603,6 +604,19 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'UA-23581568-13');
+</script>
+
+<script>
+// Performance: defer offscreen image decoding/loading by default.
+document.addEventListener('DOMContentLoaded', function () {
+  var imgs = document.querySelectorAll('img:not([loading])');
+  imgs.forEach(function (img, idx) {
+    if (idx > 2) {
+      img.setAttribute('loading', 'lazy');
+      img.setAttribute('decoding', 'async');
+    }
+  });
+});
 </script>
 
 

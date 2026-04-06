@@ -108,21 +108,21 @@
   }
 
   .carousel-img-1 {
-    background: url("../images/Cover/1.jpg");
+    background: url("../images/Cover/togo-hero.svg");
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
   }
 
   .carousel-img-2 {
-    background: url("../images/Cover/8.jpg");
+    background: url("../images/Cover/togo-sunset.svg");
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
   }
 
   .carousel-img-3 {
-    background: url("../images/Cover/3.jpg");
+    background: url("../images/Cover/togo-pattern.svg");
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -321,7 +321,7 @@ div.shadow-lg:hover{
             Popular Categories
 =========================================*/
 .popular {
-    background: url(../images/Cover/8.jpg) no-repeat fixed center;
+    background: url(../images/Cover/togo-sunset.svg) no-repeat fixed center;
     background-size: cover;
 }
 
@@ -424,7 +424,7 @@ div.shadow-lg:hover{
 ================================================================*/
 
 .hot_arrivals {
-    background: url(../images/Cover/skill-bg.jpg) no-repeat scroll center center;
+    background: url(../images/Cover/togo-pattern.svg) no-repeat scroll center center;
     background-size: cover;
 }
 
@@ -438,7 +438,7 @@ div.shadow-lg:hover{
 ====================================*/
 /* --------------------------------------- */
 .trends .trends_background {
-    background: url(../images/Cover/2.jpg) no-repeat fixed center;
+    background: url(../images/Cover/togo-hero.svg) no-repeat fixed center;
     background-size: cover;
 }
 
@@ -482,7 +482,7 @@ div.shadow-lg:hover{
 ====================================*/
 
 #stats {
-    background: url(../images/Cover/stats-bg.jpg) no-repeat fixed center;
+    background: url(../images/Cover/togo-hero.svg) no-repeat fixed center;
     background-size: cover;
 }
 
@@ -543,7 +543,7 @@ div.shadow-lg:hover{
 ====================================*/
 
 #clients {
-    background: url(../images/Cover/testimonial-bg.jpg) no-repeat scroll center center;
+    background: url(../images/Cover/togo-testimonial.svg) no-repeat scroll center center;
     background-size: cover;
 }
 
@@ -584,7 +584,7 @@ div.shadow-lg:hover{
             contact
 ====================================*/
 #contact {
-    background: url("../images/Cover/testimonial-bg.jpg") no-repeat scroll center center;
+    background: url("../images/Cover/togo-testimonial.svg") no-repeat scroll center center;
     background-size: cover;
 }
 
@@ -805,7 +805,7 @@ form.rounded:hover{
 }
 
 /* #stats {
-    background: url(../images/Cover/stats-bg.jpg) no-repeat fixed center;
+    background: url(../images/Cover/togo-hero.svg) no-repeat fixed center;
     background-size: cover;
 }
 
