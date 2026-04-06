@@ -145,26 +145,26 @@
         </h3>
     @endif
         <p style="font-size: 15px" class="text-dark mb-0 pb-0" title="Place"><i class="fas fa-map-marker-alt mr-2 p-0" style="font-size:13px;"></i>{{$row->address}}, {{$row->subcity}}, {{$row->city_name}}.</p>
-        <p style="font-size: 16px" class="text-primary mt-0 pt-1">Property Code: {{$row->property_code}}</p>
+        <p style="font-size: 16px" class="text-primary mt-0 pt-1">Réf. bien : {{$row->property_code}}</p>
 
 
     @if($row->purpose=='Sale')
         @if($row->discount_price == NULL)
-            <div style="font-size: 25px" class="product_price discount my-0"> BDT {{$row->price}}</div>
+            <div style="font-size: 25px" class="product_price discount my-0"> {{$row->price}} FCFA</div>
         @else
-            <div style="font-size: 25px" class="product_price discount my-0"> BDT {{$row->discount_price}}<span style="font-size: 17px"><del><b>BDT {{$row->price}}</b></del></span></div>
+            <div style="font-size: 25px" class="product_price discount my-0"> {{$row->discount_price}} FCFA<span style="font-size: 17px"><del><b>{{$row->price}} FCFA</b></del></span></div>
         @endif
     @else
         @if($row->discount_price == NULL)
-            <div style="font-size: 25px" class="product_price discount my-0"> BDT {{$row->price}} / month</div>
+            <div style="font-size: 25px" class="product_price discount my-0"> {{$row->price}} FCFA / mois</div>
         @else
-            <div style="font-size: 25px" class="product_price discount my-0"> BDT {{$row->discount_price}} / month<span style="font-size: 17px"><del><b>BDT {{$row->price}}</b></del></span></div>
+            <div style="font-size: 25px" class="product_price discount my-0"> {{$row->discount_price}} FCFA / mois<span style="font-size: 17px"><del><b>{{$row->price}} FCFA</b></del></span></div>
         @endif
     @endif
     {{-- @if($row->discount_price == NULL)
-        <div style="font-size: 25px" class="product_price discount my-0"> BDT {{$row->price}}</div>
+        <div style="font-size: 25px" class="product_price discount my-0"> {{$row->price}} FCFA</div>
     @else
-        <div style="font-size: 25px" class="product_price discount my-0"> BDT {{$row->discount_price}}<span style="font-size: 17px"><del><b>BDT {{$row->price}}</b></del></span></div>
+        <div style="font-size: 25px" class="product_price discount my-0"> {{$row->discount_price}} FCFA<span style="font-size: 17px"><del><b>{{$row->price}} FCFA</b></del></span></div>
     @endif --}}
 
         <div class="col-md-12 ml-0 pl-1" style="font-size: 20px">
@@ -176,8 +176,8 @@
         </div>
 
         <div class="more">
-            <a class="btn btn-white py-2 px-4 mr-3 text-white button-pipaluk button--inverted" style="font-size: 18px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-            <a class="btn py-2 px-4 text-white button-pipaluk button--inverted" style="font-size: 18px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+            <a class="btn btn-white py-2 px-4 mr-3 text-white button-pipaluk button--inverted" style="font-size: 18px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+            <a class="btn py-2 px-4 text-white button-pipaluk button--inverted" style="font-size: 18px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
         </div>  <!--div class="more" extra added, & In <a> removed 'btn-primary',added button-pipaluk button--inverted-->
     </div>
     </div>

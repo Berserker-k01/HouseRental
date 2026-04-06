@@ -62,7 +62,7 @@
                                         </div>
                                         @if($ht->discount_price == NULL)
                                         @else
-                                          <div class="deals_item_price_a ml-auto"><del>৳ {{ $ht->price }}</del></div>
+                                          <div class="deals_item_price_a ml-auto"><del>{{ $ht->price }} FCFA</del></div>
                                         @endif
                                     </div>
 
@@ -74,9 +74,9 @@
                                         </div>
 
                                         @if($ht->discount_price == NULL)
-                                          <div class="deals_item_price ml-auto" style="font-size: 18px">৳ {{ $ht->price }}</div>
+                                          <div class="deals_item_price ml-auto" style="font-size: 18px">{{ $ht->price }} FCFA</div>
                                         @else
-                                          <div class="deals_item_price ml-auto" style="font-size: 18px">৳ {{ $ht->discount_price }}</div>
+                                          <div class="deals_item_price ml-auto" style="font-size: 18px">{{ $ht->discount_price }} FCFA</div>
                                         @endif
                                     </div>
 
@@ -91,8 +91,8 @@
                                             <i class="fas fa-map-marker-alt mr-2 p-0" style="font-size:13px;" title="Place"></i>{{$ht->address}}
                                         </div>
                                         <div class="col-md-12">
-                                            <i class="fas fa-bed" title="Bed Room"> {{$ht->bedroom}}</i>|
-                                            <i class="fas fa-bath" title="Bath Room"> {{$ht->bathroom}}</i>|
+                                            <i class="fas fa-bed" title="Chambres"> {{$ht->bedroom}}</i>|
+                                            <i class="fas fa-bath" title="Salles de bain"> {{$ht->bathroom}}</i>|
                                             <i class="fas fa-car" title="Parking"> {{$ht->parking}}</i>|
                                             <i class="fas fa-home" title="Area"> {{$ht->area}}</i>
                                         </div>
@@ -150,9 +150,9 @@
                     <div class="tabbed_container">
                         <div class="tabs">
                             <ul class="clearfix">
-                                <li class="active">@if(session()->get('lang') == 'bangla')ফিচারড @else Featured @endif</li>
-                                <li>@if(session()->get('lang') == 'bangla')বিক্রয়ের জন্য @else For Sale @endif</li>
-                                <li>@if(session()->get('lang') == 'bangla')ভাড়ার জন্য @else To Rent @endif</li>
+                                <li class="active">À la une</li>
+                                <li>À vendre</li>
+                                <li>À louer</li>
                             </ul>
                             <div class="tabs_line"><span></span></div>
                         </div>
@@ -186,12 +186,12 @@
                                         <div class="product_content">
                                             {{-- <div class="product_price discount my-2">৳50,000<span><del>৳55,000</del></span></div> --}}
                                             @if($row->discount_price == NULL)
-                                                <div class="product_price discount my-2"> ৳ {{ $row->price }}</div>
+                                                <div class="product_price discount my-2"> {{ $row->price }} FCFA</div>
                                             @else
-                                             <div class="product_price discount my-2"> ৳ {{ $row->discount_price }}<span><del><b> ৳ {{ $row->price }}</b></del></span></div>
+                                             <div class="product_price discount my-2"> {{ $row->discount_price }} FCFA<span><del><b> {{ $row->price }} FCFA</b></del></span></div>
                                             @endif
                                                 {{-- <div class="row align-items-center justify-content-start">
-                                                    <span class="col-md-12"><small>Apartment For Rent</small></span>
+                                                    <span class="col-md-12"><small>Bien à louer</small></span>
                                                 </div> --}}
                                             <div class="row mb-0 pb-0">
                                                 <div class="col-md-12 text-primary">
@@ -200,8 +200,8 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-md-12 py-1 text-muted">
-                                                    <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}}</i> |
-                                                    <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}}</i> |
+                                                    <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}}</i> |
+                                                    <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}}</i> |
                                                     {{-- <i class="fas fa-car">2</i>| --}}
                                                     <i class="fas fa-home" title="Area"> {{$row->area}}</i>
                                                 </div>
@@ -210,8 +210,8 @@
     <!--------"Call & Email" (app.balde.php e niche "Modal" er code ache)-------->
                                             <div class="product_extras product_cart_button more moreFront">
                                                 {{-- <button class="product_cart_button">Check Availability</button> --}}
-    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
                                             </div>
                                         </div>
 
@@ -222,7 +222,7 @@
                                             </div>
                                         </a> --}}
         <!--------'wishlist' using ajax (niche JS ache)-------->
-                                <button class="addwishlist" data-id="{{ $row->id }}" title="Add to wishlist">
+                                <button class="addwishlist" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                     <div class="product_fav">
                                     <i class="fa fa-heart text-danger"></i>
                                     </div>
@@ -293,12 +293,12 @@
                                     <div class="product_content">
                                         {{-- <div class="product_price discount my-2">৳50,000<span><del>৳55,000</del></span></div> --}}
                                         @if($row->discount_price == NULL)
-                                            <div class="product_price discount my-2"> ৳ {{ $row->price }}</div>
+                                            <div class="product_price discount my-2"> {{ $row->price }} FCFA</div>
                                         @else
-                                         <div class="product_price discount my-2"> ৳ {{ $row->discount_price }}<span><del><b> ৳ {{ $row->price }}</b></del></span></div>
+                                         <div class="product_price discount my-2"> {{ $row->discount_price }} FCFA<span><del><b> {{ $row->price }} FCFA</b></del></span></div>
                                         @endif
                                             {{-- <div class="row align-items-center justify-content-start">
-                                                <span class="col-md-12"><small>Apartment For Rent</small></span>
+                                                <span class="col-md-12"><small>Bien à louer</small></span>
                                             </div> --}}
                                         <div class="row mb-0 pb-0">
                                             <div class="col-md-12 text-primary">
@@ -307,8 +307,8 @@
                                                 </a>
                                             </div>
                                             <div class="col-md-12 py-1 text-muted">
-                                                <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}}</i> |
-                                                <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}}</i> |
+                                                <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}}</i> |
+                                                <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}}</i> |
                                                 {{-- <i class="fas fa-car">2</i>| --}}
                                                 <i class="fas fa-home" title="Area"> {{$row->area}}</i>
                                             </div>
@@ -316,13 +316,13 @@
 
         <!--------"Call & Email" (app.balde.php e niche "Modal" er code ache)-------->
                                         <div class="product_extras product_cart_button more moreFront">
-    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
                                         </div>
                                     </div>
 
         <!------'Wishlist' using Toastr--------->
-                                    <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Add to wishlist">
+                                    <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Ajouter aux favoris">
                                         <div class="product_fav">
                                             <i class="fa fa-heart text-danger"></i>
                                         </div>
@@ -391,12 +391,12 @@
                                 <div class="product_content">
                                     {{-- <div class="product_price discount my-2">৳50,000<span><del>৳55,000</del></span></div> --}}
                                     @if($row->discount_price == NULL)
-                                        <div class="product_price discount my-2"> ৳ {{ $row->price }}</div>
+                                        <div class="product_price discount my-2"> {{ $row->price }} FCFA</div>
                                     @else
-                                     <div class="product_price discount my-2"> ৳ {{ $row->discount_price }}<span><del><b> ৳ {{ $row->price }}</b></del></span></div>
+                                     <div class="product_price discount my-2"> {{ $row->discount_price }} FCFA<span><del><b> {{ $row->price }} FCFA</b></del></span></div>
                                     @endif
                                         {{-- <div class="row align-items-center justify-content-start">
-                                            <span class="col-md-12"><small>Apartment For Rent</small></span>
+                                            <span class="col-md-12"><small>Bien à louer</small></span>
                                         </div> --}}
                                     <div class="row mb-0 pb-0">
                                         <div class="col-md-12 text-primary">
@@ -405,8 +405,8 @@
                                             </a>
                                         </div>
                                         <div class="col-md-12 py-1 text-muted">
-                                            <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}}</i> |
-                                            <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}}</i> |
+                                            <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}}</i> |
+                                            <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}}</i> |
                                             {{-- <i class="fas fa-car">2</i>| --}}
                                             <i class="fas fa-home" title="Area"> {{$row->area}}</i>
                                         </div>
@@ -414,13 +414,13 @@
 
         <!--------"Call & Email" (app.balde.php e niche "Modal" er code ache)-------->
                                     <div class="product_extras product_cart_button more moreFront">
-    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+    <a class="btn py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
                                     </div>
                                 </div>
 
         <!------ 'Wishlist' using Toastr--------->
-                                <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Add to wishlist">
+                                <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Ajouter aux favoris">
                                     <div class="product_fav">
                                         <i class="fa fa-heart text-danger"></i>
                                     </div>
@@ -483,8 +483,8 @@
             <!-- Trends Content -->
             <div class="col-lg-3">
                 <div class="trends_container">
-                    <h2 class="trends_title text-light">Best Rated Properties</h2>
-                    <div class="trends_text"><p style="color: white">Find Best Rated stylish properties all under a single roof...</p></div>
+                    <h2 class="trends_title text-light">Biens les mieux notés</h2>
+                    <div class="trends_text"><p style="color: white">Découvrez les annonces les plus appréciées en un seul endroit.</p></div>
                     <div class="trends_slider_nav">
                         <div class="trends_prev trends_nav" title="Previous"><i class="fas fa-angle-left ml-auto"></i></div>
                         <div class="trends_next trends_nav" title="Next"><i class="fas fa-angle-right ml-auto"></i></div>
@@ -528,7 +528,7 @@
                                         </span>
                                         @if($row->discount_price == NULL)
                                         @else
-                                            <span class="trends_price ml-auto" style="font-size: 15px"><del>৳ {{ $row->price }}</del></span>
+                                            <span class="trends_price ml-auto" style="font-size: 15px"><del>{{ $row->price }} FCFA</del></span>
                                         @endif
                                     </div>
 
@@ -539,9 +539,9 @@
                                             </a>
                                         </div>
                                         @if($row->discount_price == NULL)
-                                            <div class="trends_price ml-auto text-danger" style="font-size: 18px">৳ {{ $row->price }}</div>
+                                            <div class="trends_price ml-auto text-danger" style="font-size: 18px">{{ $row->price }} FCFA</div>
                                         @else
-                                            <div class="trends_price ml-auto text-danger" style="font-size: 18px">৳ {{ $row->discount_price }}</div>
+                                            <div class="trends_price ml-auto text-danger" style="font-size: 18px">{{ $row->discount_price }} FCFA</div>
                                         @endif
                                     </div>
 
@@ -551,20 +551,20 @@
 
                                     <div class="row mb-4">
                                         <div class="col-md-12">
-                                            <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}}</i>&nbsp;|&nbsp;
-                                            <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}}</i>&nbsp; | &nbsp;
+                                            <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}}</i>&nbsp;|&nbsp;
+                                            <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}}</i>&nbsp; | &nbsp;
                                             <i class="fas fa-car" title="Parking"> {{$row->parking}}</i>&nbsp;|
                                             <i class="fas fa-home" title="Area"> {{$row->area}}</i>
                                         </div>
                                     </div>
                                     <div class="more" style="margin: 0px 0px;">
-    <a class="btn text-white py-2 px-3 mr-3 button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-2"></i> Call </a>
-    <a class="btn text-white py-2 px-3 button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-2"></i> Email </a>
+    <a class="btn text-white py-2 px-3 mr-3 button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-2"></i> Appeler </a>
+    <a class="btn text-white py-2 px-3 button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-2"></i> E-mail </a>
                                     </div>
                                 </div>
 
         <!--------'wishlist' using ajax (niche JS ache)-------->
-                                <button class="addwishlist invisible" data-id="{{ $row->id }}" title="Add to wishlist">
+                                <button class="addwishlist invisible" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                     <div class="trends_fav">
                                         <i class="fa fa-heart text-danger"></i>
                                     </div>
@@ -624,11 +624,11 @@
                 <div class="col">
                     <div class="tabbed_container">
                         <div class="tabs clearfix tabs-right">
-                            <div class="new_arrivals_title">{{$city->city_name}} City's Properties</div>
+                            <div class="new_arrivals_title">Annonces — {{$city->city_name}}</div>
                             <ul class="clearfix">
-                                <li class="active">Featured</li>
-                                <li>For Sale</li>
-                                <li>To Rent</li>
+                                <li class="active">À la une</li>
+                                <li>À vendre</li>
+                                <li>À louer</li>
                             </ul>
                             <div class="tabs_line" style="border: 1px solid green; margin-bottom: 25px;"><span></span></div>
                         </div>
@@ -664,12 +664,12 @@
                                                 <div class="product_content">
                                                     {{-- <div class="product_price discount my-2">৳50,000<span><del>৳55,000</del></span></div> --}}
                                                     @if($row->discount_price == NULL)
-                                                        <div class="product_price discount my-2"> ৳ {{ $row->price }}</div>
+                                                        <div class="product_price discount my-2"> {{ $row->price }} FCFA</div>
                                                     @else
-                                                     <div class="product_price discount my-2"> ৳ {{ $row->discount_price }}<span><del><b> ৳ {{ $row->price }}</b></del></span></div>
+                                                     <div class="product_price discount my-2"> {{ $row->discount_price }} FCFA<span><del><b> {{ $row->price }} FCFA</b></del></span></div>
                                                     @endif
                                                         {{-- <div class="row align-items-center justify-content-start">
-                                                            <span class="col-md-12"><small>Apartment For Rent</small></span>
+                                                            <span class="col-md-12"><small>Bien à louer</small></span>
                                                         </div> --}}
                                                     <div class="row mb-0 pb-0">
                                                         <div class="col-md-12 text-primary">
@@ -678,8 +678,8 @@
                                                             </a>
                                                         </div>
                                                         <div class="col-md-12 py-1 text-muted">
-                                                            <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}} </i> |&nbsp;
-                                                            <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}} </i> |&nbsp;
+                                                            <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}} </i> |&nbsp;
+                                                            <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}} </i> |&nbsp;
                                                             <i class="fas fa-car" title="Parking"> {{$row->parking}} </i> |&nbsp;
                                                             <i class="fas fa-home" title="Area"> {{$row->area}} </i>
                                                         </div>
@@ -688,19 +688,19 @@
             <!--------"Check Availability" (niche "Modal" er code ache)-------->
                                                     <div class="product_extras product_cart_button more moreFront">
                                                         {{-- <button class="product_cart_button">Check Availability</button> --}}
-    <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-    <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+    <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+    <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
                                                     </div>
                                                 </div>
 
                 <!-------'Wishlist' using Toastr--------->
-                                        {{-- <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Add to wishlist">
+                                        {{-- <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Ajouter aux favoris">
                                             <div class="product_fav">
                                                 <i class="fa fa-heart text-danger"></i>
                                             </div>
                                         </a> --}}
                 <!--------'wishlist' using ajax (niche JS ache)-------->
-                                        <button class="addwishlist" data-id="{{ $row->id }}" title="Add to wishlist">
+                                        <button class="addwishlist" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                             <div class="product_fav">
                                             <i class="fa fa-heart text-danger"></i>
                                             </div>
@@ -771,12 +771,12 @@
                                             <div class="product_content">
                                                 {{-- <div class="product_price discount my-2">৳50,000<span><del>৳55,000</del></span></div> --}}
                                                 @if($row->discount_price == NULL)
-                                                    <div class="product_price discount my-2"> ৳ {{ $row->price }}</div>
+                                                    <div class="product_price discount my-2"> {{ $row->price }} FCFA</div>
                                                 @else
-                                                    <div class="product_price discount my-2"> ৳ {{ $row->discount_price }}<span><del><b> ৳ {{ $row->price }}</b></del></span></div>
+                                                    <div class="product_price discount my-2"> {{ $row->discount_price }} FCFA<span><del><b> {{ $row->price }} FCFA</b></del></span></div>
                                                 @endif
                                                     {{-- <div class="row align-items-center justify-content-start">
-                                                        <span class="col-md-12"><small>Apartment For Rent</small></span>
+                                                        <span class="col-md-12"><small>Bien à louer</small></span>
                                                     </div> --}}
                                                 <div class="row mb-0 pb-0">
                                                     <div class="col-md-12 text-primary">
@@ -785,8 +785,8 @@
                                                         </a>
                                                     </div>
                                                     <div class="col-md-12 py-1 text-muted">
-                                                        <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}} </i> |&nbsp;
-                                                        <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}} </i> |&nbsp;
+                                                        <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}} </i> |&nbsp;
+                                                        <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}} </i> |&nbsp;
                                                         <i class="fas fa-car" title="Parking"> {{$row->parking}} </i> |&nbsp;
                                                         <i class="fas fa-home" title="Area"> {{$row->area}} </i>
                                                     </div>
@@ -795,19 +795,19 @@
         <!--------"Check Availability" (niche "Modal" er code ache)-------->
                                                 <div class="product_extras product_cart_button more moreFront">
                                                     {{-- <button class="product_cart_button">Check Availability</button> --}}
-        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
                                                 </div>
                                             </div>
 
             <!-------'Wishlist' using Toastr--------->
-                                            <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Add to wishlist">
+                                            <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Ajouter aux favoris">
                                                 <div class="product_fav">
                                                     <i class="fa fa-heart text-danger"></i>
                                                 </div>
                                             </a>
             <!--------'wishlist' using ajax (niche JS ache)-------->
-                                    {{-- <button class="addwishlist" data-id="{{ $row->id }}" title="Add to wishlist">
+                                    {{-- <button class="addwishlist" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                         <div class="product_fav">
                                         <i class="fa fa-heart text-danger"></i>
                                         </div>
@@ -876,20 +876,20 @@
                                             <div class="product_content">
                                                 {{-- <div class="product_price discount my-2">৳50,000<span><del>৳55,000</del></span></div> --}}
                                                 @if($row->discount_price == NULL)
-                                                    <div class="product_price discount my-2"> ৳ {{ $row->price }}</div>
+                                                    <div class="product_price discount my-2"> {{ $row->price }} FCFA</div>
                                                 @else
-                                                    <div class="product_price discount my-2"> ৳ {{ $row->discount_price }}<span><del><b> ৳ {{ $row->price }}</b></del></span></div>
+                                                    <div class="product_price discount my-2"> {{ $row->discount_price }} FCFA<span><del><b> {{ $row->price }} FCFA</b></del></span></div>
                                                 @endif
                                                     {{-- <div class="row align-items-center justify-content-start">
-                                                        <span class="col-md-12"><small>Apartment For Rent</small></span>
+                                                        <span class="col-md-12"><small>Bien à louer</small></span>
                                                     </div> --}}
                                                 <div class="row mb-0 pb-0">
                                                     <div class="col-md-12 text-primary"><a href="{{ url('property/details/'.$row->id) }}" title="Click for details">{{$row->subcity_name}}, {{$row->city_name}}
                                                     </a>
                                                 </div>
                                                     <div class="col-md-12 py-1 text-muted">
-                                                        <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}} </i> |&nbsp;
-                                                        <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}} </i> |&nbsp;
+                                                        <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}} </i> |&nbsp;
+                                                        <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}} </i> |&nbsp;
                                                         <i class="fas fa-car" title="Parking"> {{$row->parking}} </i> |&nbsp;
                                                         <i class="fas fa-home" title="Area"> {{$row->area}} </i>
                                                     </div>
@@ -898,19 +898,19 @@
         <!--------"Check Availability" (niche "Modal" er code ache)-------->
                                                 <div class="product_extras product_cart_button more moreFront">
                                                     {{-- <button class="product_cart_button">Check Availability</button> --}}
-        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
                                                 </div>
                                             </div>
 
             <!-------'Wishlist' using Toastr--------->
-                                        <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Add to wishlist">
+                                        <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Ajouter aux favoris">
                                             <div class="product_fav">
                                                 <i class="fa fa-heart text-danger"></i>
                                             </div>
                                         </a>
             <!--------'wishlist' using ajax (niche JS ache)-------->
-                                    {{-- <button class="addwishlist" data-id="{{ $row->id }}" title="Add to wishlist">
+                                    {{-- <button class="addwishlist" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                         <div class="product_fav">
                                         <i class="fa fa-heart text-danger"></i>
                                         </div>
@@ -968,12 +968,12 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="popular_categories_content">
-                    <div class="popular_categories_title" style="color: white">Popular Cities</div>
+                    <div class="popular_categories_title" style="color: white">Villes</div>
                     <div class="popular_categories_slider_nav">
                         <div class="popular_categories_prev popular_categories_nav"><i class="fas fa-angle-left ml-auto"></i></div>
                         <div class="popular_categories_next popular_categories_nav"><i class="fas fa-angle-right ml-auto"></i></div>
                     </div>
-                    <div class="popular_categories_link" ><a href="#" style="color: white">full catalog</a></div>
+                    <div class="popular_categories_link" ><a href="#" style="color: white">Tout le catalogue</a></div>
                 </div>
             </div>
 
@@ -987,7 +987,7 @@
                         <div class="owl-item">
                             <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                                 <div class="popular_category_image"><img src="{{asset('public/frontend/images/sample/Building (2).jpg')}}" width="160px" height="100px"></div>
-                                <div class="popular_category_text">Chattogram</div>
+                                <div class="popular_category_text">Lomé</div>
                             </div>
                         </div>
 
@@ -995,7 +995,7 @@
                         <div class="owl-item">
                             <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                                 <div class="popular_category_image"><img src="{{asset('public/frontend/images/sample/Building (1).jpg')}}" width="160px" height="100px"></div>
-                                <div class="popular_category_text">Dhaka</div>
+                                <div class="popular_category_text">Kara</div>
                             </div>
                         </div>
 
@@ -1003,7 +1003,7 @@
                         <div class="owl-item">
                             <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                                 <div class="popular_category_image"><img src="{{asset('public/frontend/images/sample/Building (2).jpg')}}" width="160px" height="100px"></div>
-                                <div class="popular_category_text">Rajshahi</div>
+                                <div class="popular_category_text">Sokodé</div>
                             </div>
                         </div>
 
@@ -1011,7 +1011,7 @@
                         <div class="owl-item">
                             <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                                 <div class="popular_category_image"><img src="{{asset('public/frontend/images/sample/Building (1).jpg')}}" width="160px" height="100px"></div>
-                                <div class="popular_category_text">Khulna</div>
+                                <div class="popular_category_text">Kpalimé</div>
                             </div>
                         </div>
 
@@ -1052,8 +1052,8 @@
             <!-- Trends Content -->
             <div class="col-lg-3">
                 <div class="trends_container">
-                    <h2 class="trends_title text-light">Trends 2020...</h2>
-                    <div class="trends_text"><p style="color: white">Find all Trending stylish properties under a single roof</p></div>
+                    <h2 class="trends_title text-light">Tendances</h2>
+                    <div class="trends_text"><p style="color: white">Les biens qui attirent le plus l’attention, regroupés pour vous.</p></div>
                     <div class="trends_slider_nav">
                         <div class="trends_prev trends_nav" title="Previous"><i class="fas fa-angle-left ml-auto"></i></div>
                         <div class="trends_next trends_nav" title="Next"><i class="fas fa-angle-right ml-auto"></i></div>
@@ -1098,7 +1098,7 @@
                                         </span>
                                         @if($row->discount_price == NULL)
                                         @else
-                                            <span class="trends_price ml-auto" style="font-size: 15px"><del>৳ {{ $row->price }}</del></span>
+                                            <span class="trends_price ml-auto" style="font-size: 15px"><del>{{ $row->price }} FCFA</del></span>
                                         @endif
                                     </div>
 
@@ -1109,9 +1109,9 @@
                                             </a>
                                         </div>
                                         @if($row->discount_price == NULL)
-                                            <div class="trends_price ml-auto text-danger" style="font-size: 18px">৳ {{ $row->price }}</div>
+                                            <div class="trends_price ml-auto text-danger" style="font-size: 18px">{{ $row->price }} FCFA</div>
                                         @else
-                                            <div class="trends_price ml-auto text-danger" style="font-size: 18px">৳ {{ $row->discount_price }}</div>
+                                            <div class="trends_price ml-auto text-danger" style="font-size: 18px">{{ $row->discount_price }} FCFA</div>
                                         @endif
                                     </div>
 
@@ -1121,20 +1121,20 @@
 
                                     <div class="row mb-4">
                                         <div class="col-md-12">
-                                            <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}}</i>&nbsp;|&nbsp;
-                                            <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}}</i>&nbsp; | &nbsp;
+                                            <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}}</i>&nbsp;|&nbsp;
+                                            <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}}</i>&nbsp; | &nbsp;
                                             <i class="fas fa-car" title="Parking"> {{$row->parking}}</i>&nbsp;|
                                             <i class="fas fa-home" title="Area"> {{$row->area}}</i>
                                         </div>
                                     </div>
                                     <div class="more" style="margin: 0px 0px;">
-    <a class="btn text-white py-2 px-3 mr-3 button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-2"></i> Call </a>
-    <a class="btn text-white py-2 px-3 button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-2"></i> Email </a>
+    <a class="btn text-white py-2 px-3 mr-3 button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-2"></i> Appeler </a>
+    <a class="btn text-white py-2 px-3 button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-2"></i> E-mail </a>
                                     </div>
                                 </div>
 
         <!--------'wishlist' using ajax (niche JS ache)-------->
-                                <button class="addwishlist invisible" data-id="{{ $row->id }}" title="Add to wishlist">
+                                <button class="addwishlist invisible" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                     <div class="trends_fav">
                                         <i class="fa fa-heart text-danger"></i>
                                     </div>
@@ -1193,11 +1193,11 @@
                 <div class="col">
                     <div class="tabbed_container">
                         <div class="tabs clearfix tabs-right">
-                            <div class="new_arrivals_title">{{$city->city_name}} City's Properties</div>
+                            <div class="new_arrivals_title">Annonces — {{$city->city_name}}</div>
                             <ul class="clearfix">
-                                <li class="active">Featured</li>
-                                <li>For Sale</li>
-                                <li>To Rent</li>
+                                <li class="active">À la une</li>
+                                <li>À vendre</li>
+                                <li>À louer</li>
                             </ul>
                             <div class="tabs_line" style="border: 1px solid green; margin-bottom: 25px;"><span></span></div>
                         </div>
@@ -1233,12 +1233,12 @@
                                                 <div class="product_content">
                                                     {{-- <div class="product_price discount my-2">৳50,000<span><del>৳55,000</del></span></div> --}}
                                                     @if($row->discount_price == NULL)
-                                                        <div class="product_price discount my-2"> ৳ {{ $row->price }}</div>
+                                                        <div class="product_price discount my-2"> {{ $row->price }} FCFA</div>
                                                     @else
-                                                     <div class="product_price discount my-2"> ৳ {{ $row->discount_price }}<span><del><b> ৳ {{ $row->price }}</b></del></span></div>
+                                                     <div class="product_price discount my-2"> {{ $row->discount_price }} FCFA<span><del><b> {{ $row->price }} FCFA</b></del></span></div>
                                                     @endif
                                                         {{-- <div class="row align-items-center justify-content-start">
-                                                            <span class="col-md-12"><small>Apartment For Rent</small></span>
+                                                            <span class="col-md-12"><small>Bien à louer</small></span>
                                                         </div> --}}
                                                     <div class="row mb-0 pb-0">
                                                         <div class="col-md-12 text-primary">
@@ -1247,8 +1247,8 @@
                                                             </a>
                                                         </div>
                                                         <div class="col-md-12 py-1 text-muted">
-                                                            <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}} </i> |&nbsp;
-                                                            <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}} </i> |&nbsp;
+                                                            <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}} </i> |&nbsp;
+                                                            <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}} </i> |&nbsp;
                                                             <i class="fas fa-car" title="Parking"> {{$row->parking}} </i> |&nbsp;
                                                             <i class="fas fa-home" title="Area"> {{$row->area}} </i>
                                                         </div>
@@ -1257,19 +1257,19 @@
             <!--------"Check Availability" (niche "Modal" er code ache)-------->
                                                     <div class="product_extras product_cart_button more moreFront">
                                                         {{-- <button class="product_cart_button">Check Availability</button> --}}
-        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
                                                     </div>
                                                 </div>
 
                 <!-------'Wishlist' using Toastr--------->
-                                        {{-- <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Add to wishlist">
+                                        {{-- <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Ajouter aux favoris">
                                             <div class="product_fav">
                                                 <i class="fa fa-heart text-danger"></i>
                                             </div>
                                         </a> --}}
                 <!--------'wishlist' using ajax (niche JS ache)-------->
-                                        <button class="addwishlist" data-id="{{ $row->id }}" title="Add to wishlist">
+                                        <button class="addwishlist" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                             <div class="product_fav">
                                             <i class="fa fa-heart text-danger"></i>
                                             </div>
@@ -1340,12 +1340,12 @@
                                             <div class="product_content">
                                                 {{-- <div class="product_price discount my-2">৳50,000<span><del>৳55,000</del></span></div> --}}
                                                 @if($row->discount_price == NULL)
-                                                    <div class="product_price discount my-2"> ৳ {{ $row->price }}</div>
+                                                    <div class="product_price discount my-2"> {{ $row->price }} FCFA</div>
                                                 @else
-                                                    <div class="product_price discount my-2"> ৳ {{ $row->discount_price }}<span><del><b> ৳ {{ $row->price }}</b></del></span></div>
+                                                    <div class="product_price discount my-2"> {{ $row->discount_price }} FCFA<span><del><b> {{ $row->price }} FCFA</b></del></span></div>
                                                 @endif
                                                     {{-- <div class="row align-items-center justify-content-start">
-                                                        <span class="col-md-12"><small>Apartment For Rent</small></span>
+                                                        <span class="col-md-12"><small>Bien à louer</small></span>
                                                     </div> --}}
                                                 <div class="row mb-0 pb-0">
                                                     <div class="col-md-12 text-primary">
@@ -1354,8 +1354,8 @@
                                                         </a>
                                                     </div>
                                                     <div class="col-md-12 py-1 text-muted">
-                                                        <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}} </i> |&nbsp;
-                                                        <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}} </i> |&nbsp;
+                                                        <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}} </i> |&nbsp;
+                                                        <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}} </i> |&nbsp;
                                                         <i class="fas fa-car" title="Parking"> {{$row->parking}} </i> |&nbsp;
                                                         <i class="fas fa-home" title="Area"> {{$row->area}} </i>
                                                     </div>
@@ -1364,19 +1364,19 @@
         <!--------"Check Availability" (niche "Modal" er code ache)-------->
                                                 <div class="product_extras product_cart_button more moreFront">
                                                     {{-- <button class="product_cart_button">Check Availability</button> --}}
-        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
                                                 </div>
                                             </div>
 
             <!-------'Wishlist' using Toastr--------->
-                                            <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Add to wishlist">
+                                            <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Ajouter aux favoris">
                                                 <div class="product_fav">
                                                     <i class="fa fa-heart text-danger"></i>
                                                 </div>
                                             </a>
             <!--------'wishlist' using ajax (niche JS ache)-------->
-                                    {{-- <button class="addwishlist" data-id="{{ $row->id }}" title="Add to wishlist">
+                                    {{-- <button class="addwishlist" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                         <div class="product_fav">
                                         <i class="fa fa-heart text-danger"></i>
                                         </div>
@@ -1445,12 +1445,12 @@
                                             <div class="product_content">
                                                 {{-- <div class="product_price discount my-2">৳50,000<span><del>৳55,000</del></span></div> --}}
                                                 @if($row->discount_price == NULL)
-                                                    <div class="product_price discount my-2"> ৳ {{ $row->price }}</div>
+                                                    <div class="product_price discount my-2"> {{ $row->price }} FCFA</div>
                                                 @else
-                                                    <div class="product_price discount my-2"> ৳ {{ $row->discount_price }}<span><del><b> ৳ {{ $row->price }}</b></del></span></div>
+                                                    <div class="product_price discount my-2"> {{ $row->discount_price }} FCFA<span><del><b> {{ $row->price }} FCFA</b></del></span></div>
                                                 @endif
                                                     {{-- <div class="row align-items-center justify-content-start">
-                                                        <span class="col-md-12"><small>Apartment For Rent</small></span>
+                                                        <span class="col-md-12"><small>Bien à louer</small></span>
                                                     </div> --}}
                                                 <div class="row mb-0 pb-0">
                                                     <div class="col-md-12 text-primary">
@@ -1459,8 +1459,8 @@
                                                         </a>
                                                     </div>
                                                     <div class="col-md-12 py-1 text-muted">
-                                                        <i class="fas fa-bed" title="Bed Room"> {{$row->bedroom}} </i> |&nbsp;
-                                                        <i class="fas fa-bath" title="Bath Room"> {{$row->bathroom}} </i> |&nbsp;
+                                                        <i class="fas fa-bed" title="Chambres"> {{$row->bedroom}} </i> |&nbsp;
+                                                        <i class="fas fa-bath" title="Salles de bain"> {{$row->bathroom}} </i> |&nbsp;
                                                         <i class="fas fa-car" title="Parking"> {{$row->parking}} </i> |&nbsp;
                                                         <i class="fas fa-home" title="Area"> {{$row->area}} </i>
                                                     </div>
@@ -1469,19 +1469,19 @@
         <!--------"Check Availability" (niche "Modal" er code ache)-------->
                                                 <div class="product_extras product_cart_button more moreFront">
                                                     {{-- <button class="product_cart_button">Check Availability</button> --}}
-        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+        <a class="btn py-2 px-4 mr-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+        <a class="btn py-2 px-4 ml-2 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
                                                 </div>
                                             </div>
 
             <!-------'Wishlist' using Toastr--------->
-                                        <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Add to wishlist"">
+                                        <a href="{{ URL::to('add/wishlist/tostr/'.$row->id) }}" title="Ajouter aux favoris"">
                                             <div class="product_fav">
                                                 <i class="fa fa-heart text-danger"></i>
                                             </div>
                                         </a>
             <!--------'wishlist' using ajax (niche JS ache)-------->
-                                    {{-- <button class="addwishlist" data-id="{{ $row->id }}" title="Add to wishlist">
+                                    {{-- <button class="addwishlist" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                         <div class="product_fav">
                                         <i class="fa fa-heart text-danger"></i>
                                         </div>
@@ -1602,7 +1602,7 @@
             <div class="col">
 
                 <div class="reviews_title_container">
-                    <h3 class="reviews_title">Latest Reviews</h3>
+                    <h3 class="reviews_title">Derniers avis</h3>
                     <div class="reviews_all ml-auto"><a href="#">view all <span>reviews</span></a></div>
                 </div>
 
@@ -1711,16 +1711,16 @@
                 <div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
                     <div class="newsletter_title_container">
                         <div class="newsletter_icon"><img src="{{ asset('public/frontend/images/send.png') }}" alt=""></div>
-                        <div class="newsletter_title">Sign up for Newsletter</div>
-                        <div class="newsletter_text"><p>...and get the latest update.</p></div>
+                        <div class="newsletter_title">Inscrivez-vous à la newsletter</div>
+                        <div class="newsletter_text"><p>… et recevez nos actualités.</p></div>
                     </div>
                     <div class="newsletter_content clearfix">
                         <form action="{{ route('store.newsletters') }}" class="newsletter_form" method="post">
                             @csrf
-                            <input type="email" class="newsletter_input" required="required" placeholder="Enter your email address" name="email">
-                            <button class="newsletter_button" type="submit">Subscribe</button>
+                            <input type="email" class="newsletter_input" required="required" placeholder="Votre adresse e-mail" name="email">
+                            <button class="newsletter_button" type="submit">S’inscrire</button>
                         </form>
-                        <div class="newsletter_unsubscribe_link"><a href="">unsubscribe</a></div>
+                        <div class="newsletter_unsubscribe_link"><a href="">Se désinscrire</a></div>
                     </div>
                 </div>
             </div>
@@ -1739,7 +1739,7 @@
     <div class="container py-4">
         <div class="row text-center">
             <div class="col">
-                <h2 class="mb-0">Frequently Asked Questions</h2>
+                <h2 class="mb-0">Questions fréquentes</h2>
             </div>
         </div>
         <div class="row mt-5">
@@ -1748,22 +1748,21 @@
             <div class="card bg-light text-dark my-2">
                 <div class="card-header text-primary" role="tab">
                     <h4 class="mb-0">
-                    <div data-toggle="collapse" href="#questionOne"><i class="fa fa-arrow-circle-down pr-2"></i>How do I post a property for sale/rent?</div>
+                    <div data-toggle="collapse" href="#questionOne"><i class="fa fa-arrow-circle-down pr-2"></i>Comment publier une annonce (vente ou location) ?</div>
                     </h4>
                 </div>
                 <div class="collapse" id="questionOne" data-parent="#accordion">
                     <div class="card-body text-left">
                     <p class="mb-0">
                         <ol class="offset-md-3 text-muted" style="font-size: 15px; word-spacing: 4px">
-                            <li> At first “Log-in” to your account, then go to your “profile” page.</li>
-                            <li> Click “Add My Property” option from the menu to begin creating your listing.</li>
-                            <li> Then a “form” will appear in your screens to fill up and submit.</li>
-                            <li> Enter basic information about your properties including lease terms and utilities.</li>
-                            <li> Upload a few photos too of your properties for rent or sell.</li>
-                            <li> Last but not the list you have pay BDT 500 for uploading your property here.</li>
-                            <li> The more information you provide, the more likely a renter will find your listing.</li>
-                            <li> Preview your listing to make sure everything looks right.</li>
-                            <li> “Submit” your listing.</li>
+                            <li>Connectez-vous à votre compte, puis ouvrez votre page profil.</li>
+                            <li>Choisissez « Publier une annonce » dans le menu.</li>
+                            <li>Remplissez le formulaire (caractéristiques du bien, conditions, etc.).</li>
+                            <li>Ajoutez des photos de qualité.</li>
+                            <li>Réglez les frais de publication le cas échéant (selon les paramètres du site).</li>
+                            <li>Plus votre annonce est détaillée, plus elle sera visible pour les acheteurs ou locataires.</li>
+                            <li>Vérifiez l’aperçu avant validation.</li>
+                            <li>Validez pour soumettre votre annonce à modération.</li>
                         </ol>
                     </p>
                     </div>
@@ -1786,12 +1785,12 @@
             <div class="card bg-light text-dark my-2">
                 <div class="card-header text-primary" role="tab">
                     <h4 class="mb-0">
-                    <div data-toggle="collapse" href="#questionThree"><i class="fa fa-arrow-circle-down pr-2"></i>How can I submit feedback on my experience?</div>
+                    <div data-toggle="collapse" href="#questionThree"><i class="fa fa-arrow-circle-down pr-2"></i>Comment nous faire part de vos retours ?</div>
                     </h4>
                 </div>
                 <div class="collapse" id="questionThree" data-parent="#accordion">
                     <div class="card-body">
-                    <p class="mb-0" style="font-size: 15px">We’re always open to feedback that will help us give you the best experience possible. If you’re posting a Room for Rent, send your thoughts and suggestions to <a href="mailto:{{ $setting->email_one }}"> {{ $setting->email_one }} </a>. For feedback on other types of rentals you can email <a href="mailto:{{ $setting->email_two }}"> {{ $setting->email_two }} </a>.</p>
+                    <p class="mb-0" style="font-size: 15px">Vos suggestions nous aident à améliorer la plateforme. Écrivez-nous à <a href="mailto:{{ $setting->email_one }}"> {{ $setting->email_one }} </a> ou <a href="mailto:{{ $setting->email_two }}"> {{ $setting->email_two }} </a>.</p>
                     </div>
                 </div>
             </div>
@@ -1799,12 +1798,12 @@
             <div class="card bg-light text-dark my-2">
                 <div class="card-header text-primary" role="tab">
                     <h4 class="mb-0">
-                    <div data-toggle="collapse" href="#questionFour"><i class="fa fa-arrow-circle-down pr-2"></i>How will I know when a renter is interested in my listing?</div>
+                    <div data-toggle="collapse" href="#questionFour"><i class="fa fa-arrow-circle-down pr-2"></i>Comment suis-je informé d’un intérêt pour mon bien ?</div>
                     </h4>
                 </div>
                 <div class="collapse" id="questionFour" data-parent="#accordion">
                     <div class="card-body">
-                    <p class="mb-0" style="font-size: 15px; word-spacing: 2px">How renters contact you is up to you.Normally renters can complete short inquiry form which will be delivered to you as an email. These leads will also be shown in your dashboard for your listings. We don’t display your email address, so you don’t have to worry about spam.</p>
+                    <p class="mb-0" style="font-size: 15px; word-spacing: 2px">Les visiteurs peuvent vous contacter via le formulaire du site : vous recevez une notification par e-mail et les demandes apparaissent dans votre espace. Votre adresse e-mail n’est pas affichée publiquement.</p>
                     </div>
                 </div>
             </div>

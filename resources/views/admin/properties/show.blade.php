@@ -3,7 +3,7 @@
 
     <div class="sl-mainpanel">
       <nav class="breadcrumb sl-breadcrumb">
-        <a class="breadcrumb-item" href="#">BariWala</a>
+        <a class="breadcrumb-item" href="#">Tedia-investisment</a>
         <span class="breadcrumb-item active">View Property Section</span>
       </nav>
       <div class="sl-pagebody">
@@ -92,7 +92,7 @@
                         @if(isset($property->amount) && isset($property->transaction_id))
                             <tr>
                                 <th>Payment :</th>
-                                <th>৳ {{$property->amount}}</th>
+                                <th>{{ $property->amount}} FCFA</th>
                             </tr>
                             <tr>
                                 <th>Transaction Id :</th>
@@ -150,19 +150,19 @@
                         </tr>
                         <tr>
                             <th>Price :</th>
-                            <th>৳ {{ $property->price }}</th>
+                            <th>{{ $property->price }} FCFA</th>
                         </tr>
                         <tr>
                             <th>Discount Price :</th>
-                            <th>৳ {{ $property->discount_price }}</th>
+                            <th>{{ $property->discount_price }} FCFA</th>
                         </tr>
                         <tr>
                             <th>Service Charge :</th>
-                            <th>৳ {{ $property->service_charge }}</th>
+                            <th>{{ $property->service_charge }} FCFA</th>
                         </tr>
                         <tr>
                             <th class="text-primary">Total Price :</th>
-                            <th class="text-primary">৳ {{ number_format($property->total_price) }}</th>
+                            <th class="text-primary">{{ number_format($property->total_price) }} FCFA</th>
                         </tr>
 
          	    	</table>

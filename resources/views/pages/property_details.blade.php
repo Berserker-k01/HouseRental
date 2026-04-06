@@ -9,7 +9,12 @@
 <section class="details container py-3">
 
 <!---------- Breadcum ---------->
-    <p style="font-size:15px;" class="mb-2 text-primary"> {{$property->type}} For {{$property->purpose}} &nbsp;>&nbsp; {{$property->subcity}} &nbsp;>&nbsp; {{$property->city_name}} &nbsp;>&nbsp; Property Code: {{$property->property_code}}</p>
+    <p style="font-size:15px;" class="mb-2 text-primary"> {{$property->type}}
+        @if(strtoupper($property->purpose) === 'SALE') à vendre
+        @elseif(strtoupper($property->purpose) === 'RENT') à louer
+        @else — {{ $property->purpose }}
+        @endif
+        &nbsp;>&nbsp; {{$property->subcity}} &nbsp;>&nbsp; {{$property->city_name}} &nbsp;>&nbsp; Réf. bien : {{$property->property_code}}</p>
 
 <!-------Image_Slider_carousal------->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -22,7 +27,7 @@
 
         <!--------'wishlist' using ajax------->
             <div class="carousel-caption" style="transform: translate(165px,-401px)">
-                <button class="addwishlist float-right" data-id="{{ $property->id }}" role="button" style="background: none; border-style:none;" title="Add to wishlist">
+                <button class="addwishlist float-right" data-id="{{ $property->id }}" role="button" style="background: none; border-style:none;" title="Ajouter aux favoris">
                     <i class="fa fa-heart text-danger bg-white rounded-circle" style="font-size: 20px; padding: 12px;"></i>
                 </button>
             </div>
@@ -85,35 +90,35 @@
 <!-------------------------Details-Property-------------------------------->
     <div>
         <!--heading-->
-        @if($property->city_name=='Chattogram' || $property->city_name=='Khulna' || $property->city_name=='Sylhet')
+        @if($property->purpose=='Sale')
             <h3 class="pt-4 text-primary font-weight-normal" style="font-size: 25px;">
-                Visit This Furnished {{$property->type}} Up For {{$property->purpose}} Covering An Area Of {{$property->area}} At {{$property->subcity}}, {{$property->city_name}}
-            </h3>
-        @elseif($property->purpose=='Sale')
-            <h3 class="pt-4 text-primary font-weight-normal" style="font-size: 25px;">
-                Grab This Luxurious {{$property->area}} {{$property->type}} Is Up For {{$property->purpose}} At {{$property->subcity}}, {{$property->city_name}}
+                {{ $property->type }} à vendre — surface {{ $property->area }}, {{ $property->subcity }}, {{ $property->city_name }}
             </h3>
         @elseif($property->purpose=='Rent')
             <h3 class="pt-4 text-primary font-weight-normal" style="font-size: 25px;">
-                Make This {{$property->type}} Your Next Residing Location, Which Is Ready To {{$property->purpose}} At {{$property->subcity}}, {{$property->city_name}}
+                {{ $property->type }} à louer — {{ $property->subcity }}, {{ $property->city_name }}
+            </h3>
+        @else
+            <h3 class="pt-4 text-primary font-weight-normal" style="font-size: 25px;">
+                {{ $property->type }} — {{ $property->subcity }}, {{ $property->city_name }}
             </h3>
         @endif  <!--End heading-->
 
         <p style="font-size: 18px" class="text-dark mb-0 pb-0" title="Place"><i class="fas fa-map-marker-alt mr-2 p-0" style="font-size:16px;"></i>{{$property->address}}, {{$property->subcity}}, {{$property->city_name}}.</p>
-        <p style="font-size: 18px" class="text-primary mt-0 pt-1 mb-1">Property Code: {{$property->property_code}}</p>
+        <p style="font-size: 18px" class="text-primary mt-0 pt-1 mb-1">Réf. bien : {{$property->property_code}}</p>
 
         <!----Price---->
         @if($property->purpose=='Sale')
             @if($property->discount_price == NULL)
-                <div style="font-size: 26px" class="product_price discount my-0"> BDT {{$property->price}}</div>
+                <div style="font-size: 26px" class="product_price discount my-0"> {{$property->price}} FCFA</div>
             @else
-                <div style="font-size: 26px" class="product_price discount my-0"> BDT {{$property->discount_price}}<span style="font-size: 17px"><del><b>BDT {{$property->price}}</b></del></span></div>
+                <div style="font-size: 26px" class="product_price discount my-0"> {{$property->discount_price}} FCFA<span style="font-size: 17px"><del><b>{{$property->price}} FCFA</b></del></span></div>
             @endif
         @else
             @if($property->discount_price == NULL)
-                <div style="font-size: 26px" class="product_price discount my-0"> BDT {{$property->price}} / Month</div>
+                <div style="font-size: 26px" class="product_price discount my-0"> {{$property->price}} FCFA / mois</div>
             @else
-                <div style="font-size: 26px" class="product_price discount my-0"> BDT {{$property->discount_price}} / Month<span style="font-size: 18px"><del><b>BDT {{$property->price}}</b></del></span></div>
+                <div style="font-size: 26px" class="product_price discount my-0"> {{$property->discount_price}} FCFA / mois<span style="font-size: 18px"><del><b>{{$property->price}} FCFA</b></del></span></div>
             @endif
         @endif  <!----End Price---->
 
@@ -126,8 +131,8 @@
             <i class="fas fa-building p-4" title="Floor Level"> {{$property->floor}} </i> |
         </div> --}}
         <div class="py-3 more">
-            <a class="btn py-2 px-4 mr-3 text-white button-pipaluk button--inverted" style="font-size: 18px" roll="button" data-toggle="modal" data-target="#call{{$property->id}}"><i class="fas fa-phone pr-1"></i> Call </a>
-            <a class="btn py-2 px-4 text-white button-pipaluk button--inverted" style="font-size: 18px" roll="button" data-toggle="modal" data-target="#email{{$property->id}}"><i class="far fa-envelope pr-1"></i> Email </a>
+            <a class="btn py-2 px-4 mr-3 text-white button-pipaluk button--inverted" style="font-size: 18px" roll="button" data-toggle="modal" data-target="#call{{$property->id}}"><i class="fas fa-phone pr-1"></i> Appeler </a>
+            <a class="btn py-2 px-4 text-white button-pipaluk button--inverted" style="font-size: 18px" roll="button" data-toggle="modal" data-target="#email{{$property->id}}"><i class="far fa-envelope pr-1"></i> E-mail </a>
         </div>
 
 
@@ -145,15 +150,15 @@
                           <td>{{ $property->area }}</td>
                       </tr>
                       <tr>
-                          <td>Price :</td>
-                          <td>৳ {{ $property->price }}</td>
+                          <td>Prix :</td>
+                          <td>{{ $property->price }} FCFA</td>
                       </tr>
                       <tr>
                           @if (isset($property->discount_price))
-                            <td>Discount Price ({{ intval($discount) }}%) :</td>
-                            <td>৳ {{ $property->discount_price }}</td>
+                            <td>Prix remisé ({{ intval($discount) }} %) :</td>
+                            <td>{{ $property->discount_price }} FCFA</td>
                           @else
-                            <td>Discount Price :</td>
+                            <td>Prix remisé :</td>
                             <td>Not Available</td>
                           @endif
                       </tr>
@@ -196,7 +201,7 @@
                     <tr>
                         <td>Service Charge :</td>
                         @if (isset($property->service_charge))
-                          <td>৳ {{ $property->service_charge }}</td>
+                          <td>{{ $property->service_charge }} FCFA</td>
                         @else
                           <td>N/A</td>
                         @endif
@@ -233,7 +238,7 @@
 
 <!-------- Start Facebook_Comment_Box-----Video Link------>
     <div class="row mt-5 pt-0">
-        <h3 class="col-md-12 p-2 mb-3 text-success" style="background-color: #e1f1e9e5; font-size:29px;">Property Review</h3>
+        <h3 class="col-md-12 p-2 mb-3 text-success" style="background-color: #e1f1e9e5; font-size:29px;">Avis sur le bien</h3>
         <div class="col-md-12 ml-2 pr-2">
             <ul class="nav nav-tabs " role="tablist">
                 <li class="nav-item" style="background-color: #e1f1e9e5"><a class="nav-link active" href="#bootstrap-home" aria-controls="home" role="tab" data-toggle="tab">Comment Box</a></li>
@@ -250,7 +255,7 @@
                         </div>
                         <div role="tablist" aria-labelledby="home-tab" class="tab-pane fade" id="bootstrap-about" style="font-size: 15px;">
                             @if (isset($property->video))
-                                Property Videos : <a href="{{ $property->video }}" target="_blank" class="pl-1">{{ $property->video }}</a>
+                                Vidéo : <a href="{{ $property->video }}" target="_blank" class="pl-1">{{ $property->video }}</a>
                             @else
                                 Sorry!!! No Video Is Available At This Moment.
                             @endif
@@ -292,7 +297,7 @@ $bestRated=DB::table('user_properties')->join('cities','user_properties.city_id'
           <!-- Trends Content -->
           <div class="col-lg-2">
               <div class="trends_container">
-                  <h2 class="trends_title text-primary" style="font-size: 33px;">See Nearby Property</h2>
+                  <h2 class="trends_title text-primary" style="font-size: 33px;">Biens à proximité</h2>
                   <div class="trends_text"><p style="color: #7d74ff">Explore<br>Your Nearby<br>Neighborhoods...</p></div>
                   <div class="trends_slider_nav">
                       <div class="trends_prev trends_nav" title="Previous"><i class="fas fa-angle-left ml-auto"></i></div>
@@ -337,7 +342,7 @@ $bestRated=DB::table('user_properties')->join('cities','user_properties.city_id'
                                       </span>
                                       @if($row->discount_price == NULL)
                                       @else
-                                          <span class="trends_price ml-auto" style="font-size: 15px"><del>৳ {{ $row->price }}</del></span>
+                                          <span class="trends_price ml-auto" style="font-size: 15px"><del>{{ $row->price }} FCFA</del></span>
                                       @endif
                                   </div>
 
@@ -348,9 +353,9 @@ $bestRated=DB::table('user_properties')->join('cities','user_properties.city_id'
                                           </a>
                                       </div>
                                       @if($row->discount_price == NULL)
-                                          <div class="trends_price ml-auto text-danger" style="font-size: 18px">৳ {{ $row->price }}</div>
+                                          <div class="trends_price ml-auto text-danger" style="font-size: 18px">{{ $row->price }} FCFA</div>
                                       @else
-                                          <div class="trends_price ml-auto text-danger" style="font-size: 18px">৳ {{ $row->discount_price }}</div>
+                                          <div class="trends_price ml-auto text-danger" style="font-size: 18px">{{ $row->discount_price }} FCFA</div>
                                       @endif
                                   </div>
 
@@ -367,13 +372,13 @@ $bestRated=DB::table('user_properties')->join('cities','user_properties.city_id'
                                       </div>
                                   </div>
                                   <div class="more ml-2" style="margin: 0px 0px;">
-  <a class="btn btn-transparent py-2 px-4 mr-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-2"></i> Call </a>
-  <a class="btn btn-transparent py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-2"></i> Email </a>
+  <a class="btn btn-transparent py-2 px-4 mr-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#call{{$row->id}}"><i class="fas fa-phone pr-2"></i> Appeler </a>
+  <a class="btn btn-transparent py-2 px-3 text-white button-pipaluk button--inverted" style="font-size: 16px" roll="button" data-toggle="modal" data-target="#email{{$row->id}}"><i class="far fa-envelope pr-2"></i> E-mail </a>
                                   </div>
                               </div>
 
       <!--------'wishlist' using ajax (niche JS ache)-------->
-                              <button class="addwishlist invisible" data-id="{{ $row->id }}" title="Add to wishlist">
+                              <button class="addwishlist invisible" data-id="{{ $row->id }}" title="Ajouter aux favoris">
                                   <div class="trends_fav">
                                       <i class="fa fa-heart text-danger"></i>
                                   </div>

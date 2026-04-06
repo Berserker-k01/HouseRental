@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\Http\Controllers\Admin\City;
 
@@ -36,7 +36,7 @@ class SubcityController extends Controller
 
         DB::table('subcities')->insert($data);
         $notification = array(
-            'message'=>'Successfully Sub-city Inserted',
+            'message'=>'Sous-zone ajoutée.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -47,7 +47,7 @@ class SubcityController extends Controller
         DB::table('subcities')->where('id',$id)->delete();
 
         $notification = array(
-            'message'=>'Successfully Sub-city Deleted',
+            'message'=>'Sous-zone supprimée.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -73,7 +73,7 @@ class SubcityController extends Controller
         $subcity= DB::table('subcities')->where('id',$id)->update($data);
 
         $notification = array(
-            'message'=>'Successfully Sub-city Updated',
+            'message'=>'Sous-zone mise à jour.',
             'alert-type'=>'success'
         );
         return redirect()->route('subcity')->with($notification);

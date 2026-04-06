@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\Http\Controllers\Admin;
 
@@ -49,13 +49,13 @@ class SettingController extends Controller
 
         if ($update) {
             $notification=array(
-                'message'=>'Setting has Updated',
+                'message'=>'Paramètres enregistrés.',
                 'alert-type'=>'success'
             );
                 return Redirect()->back()->with($notification);
         }else{
             $notification=array(
-                'message'=>'Nothing To Update',
+                'message'=>'Aucune modification.',
                 'alert-type'=>'success'
             );
                 return Redirect()->back()->with($notification);
@@ -80,7 +80,7 @@ class SettingController extends Controller
     {
         \Artisan::call('backup:run');
         $notification=array(
-                    'message'=>'Successfully Database Backup Done',
+                    'message'=>'Sauvegarde de la base effectuée.',
                     'alert-type'=>'success'
                 );
         return Redirect()->back()->with($notification);
@@ -91,7 +91,7 @@ class SettingController extends Controller
     {
         Storage::delete('Laravel/'.$getFilename);      //'Storage' er 'Laravel' folder theke delete hobe,
         $notification=array(
-                    'message'=>'Successfully Backup Deleted',
+                    'message'=>'Sauvegarde supprimée.',
                     'alert-type'=>'success'
                 );
         return Redirect()->back()->with($notification);

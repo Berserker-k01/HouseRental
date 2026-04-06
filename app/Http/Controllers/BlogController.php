@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use DB;
-use Session;
+
 class BlogController extends Controller
 {
     public function blog()
@@ -25,25 +24,5 @@ class BlogController extends Controller
             ->first();
         return view('pages.blogDescription',compact('post'));
     }
-
-
-
-//------------Making Session to get Bangla/English language--------------------
-    public function Bangla()
-    {
-        Session::get('lang');
-        session()->forget('lang');
-        Session::put('lang','bangla');
-        return redirect()->back();
-    }
-
-    public function English()
-    {
-        Session::get('lang');
-        session()->forget('lang');
-        Session::put('lang','english');
-        return redirect()->back();
-    }
-
 
 }

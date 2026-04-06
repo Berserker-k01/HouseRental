@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Meta -->
-    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="description" content="Espace d’administration Tedia-investisment.">
     <meta name="author" content="ThemePixels">
 
     <!-- title -->
-    <title>Admin Panel - Bariwala.com</title>
+    <title>Administration — Tedia-investisment</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="{{asset('public/frontend/logo/logo3.jpg')}}" type="image/x-icon">
@@ -40,13 +40,13 @@
 
     @else
             <!-- ########## START: LEFT PANEL ########## -->
-    <div class="sl-logo"><a href="{{url('admin/home')}}"><i class="icon ion-android-star-outline"></i> Bariwala.com</a></div>
+    <div class="sl-logo"><a href="{{url('admin/home')}}"><i class="icon ion-android-star-outline"></i> Tedia-investisment</a></div>
     <div class="sl-sideleft">
       <div class="sl-sideleft-menu">
         <a href="{{url('admin/home')}}" class="sl-menu-link active">
           <div class="sl-menu-item">
             <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
-            <span class="menu-item-label">Dashboard</span>
+            <span class="menu-item-label">Tableau de bord</span>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
 
@@ -55,13 +55,13 @@
             <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
                 <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
-                <span class="menu-item-label">Places</span>
+                <span class="menu-item-label">Zones</span>
                 <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
             </a><!-- sl-menu-link -->
             <ul class="sl-menu-sub nav flex-column">
-                <li class="nav-item"><a href="{{ route('city') }}" class="nav-link">City</a></li>
-                <li class="nav-item"><a href="{{ route('subcity') }}" class="nav-link">Sub-City</a></li>
+                <li class="nav-item"><a href="{{ route('city') }}" class="nav-link">Villes</a></li>
+                <li class="nav-item"><a href="{{ route('subcity') }}" class="nav-link">Sous-zones</a></li>
             </ul>
         @else
         @endif
@@ -93,14 +93,14 @@
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
               <i class="menu-item-icon icon ion-ios-filing-outline tx-24"></i>
-              <span class="menu-item-label">Blogs</span>
+              <span class="menu-item-label">Blog</span>
               <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
           </a><!-- sl-menu-link -->
           <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item"><a href="{{ route('postCategory.name') }}" class="nav-link">Category</a></li>
-            <li class="nav-item"><a href="{{ route('add.blogpost') }}" class="nav-link">Add Post</a></li>
-            <li class="nav-item"><a href="{{ route('all.blogpost') }}" class="nav-link">All Post</a></li>
+            <li class="nav-item"><a href="{{ route('postCategory.name') }}" class="nav-link">Catégories</a></li>
+            <li class="nav-item"><a href="{{ route('add.blogpost') }}" class="nav-link">Nouvel article</a></li>
+            <li class="nav-item"><a href="{{ route('all.blogpost') }}" class="nav-link">Tous les articles</a></li>
           </ul>
         @else
         @endif
@@ -110,17 +110,17 @@
 <a href="#" class="sl-menu-link">
     <div class="sl-menu-item">
     <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
-    <span class="menu-item-label">All Properties</span>
+    <span class="menu-item-label">Annonces</span>
     <i class="menu-item-arrow fa fa-angle-down"></i>
     </div><!-- menu-item -->
 </a><!-- sl-menu-link -->
 <ul class="sl-menu-sub nav flex-column">
     {{-- <li class="nav-item"><a href="{{ route('admin.add.property') }}" class="nav-link">Add New Property</a></li> --}}
-    <li class="nav-item"><a href="{{ route('pending.user_property') }}" class="nav-link">Pending for Approval</a></li>
-    <li class="nav-item"><a href="{{ route('admin.uploaded.property') }}" class="nav-link">Uploaded Properties</a></li>
-    <li class="nav-item"><a href="{{ route('admin.delivery.progress') }}" class="nav-link">Delivery On Progress</a></li>
-    <li class="nav-item"><a href="{{ route('admin.delivered.property') }}" class="nav-link">Successfully Delivered</a></li>
-    <li class="nav-item"><a href="{{ route('admin.cancelled.property') }}" class="nav-link">Cancelled Properties</a></li>
+    <li class="nav-item"><a href="{{ route('pending.user_property') }}" class="nav-link">En attente de validation</a></li>
+    <li class="nav-item"><a href="{{ route('admin.uploaded.property') }}" class="nav-link">Annonces publiées</a></li>
+    <li class="nav-item"><a href="{{ route('admin.delivery.progress') }}" class="nav-link">Traitement en cours</a></li>
+    <li class="nav-item"><a href="{{ route('admin.delivered.property') }}" class="nav-link">Finalisées</a></li>
+    <li class="nav-item"><a href="{{ route('admin.cancelled.property') }}" class="nav-link">Annulées</a></li>
 </ul>
 @else
 @endif
@@ -130,14 +130,14 @@
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
               <i class="menu-item-icon icon ion-ios-cart-outline tx-24"></i>
-              <span class="menu-item-label">Orders</span>
+              <span class="menu-item-label">Demandes</span>
               <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item"><a href="{{route('admin.add.order')}}" class="nav-link">Add New Order</a></li>
-            <li class="nav-item"><a href="{{route('admin.new.order')}}" class="nav-link">New Pending Orders</a></li>
-            <li class="nav-item"><a href="{{route('admin.all.order')}}" class="nav-link">All Orders</a></li>
+            <li class="nav-item"><a href="{{route('admin.add.order')}}" class="nav-link">Nouvelle demande</a></li>
+            <li class="nav-item"><a href="{{route('admin.new.order')}}" class="nav-link">Demandes en attente</a></li>
+            <li class="nav-item"><a href="{{route('admin.all.order')}}" class="nav-link">Toutes les demandes</a></li>
         </ul>
         @else
         @endif
@@ -147,15 +147,15 @@
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="menu-item-icon icon ion-ios-paper-outline tx-22"></i>
-            <span class="menu-item-label">Reports</span>
+            <span class="menu-item-label">Rapports</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-          <li class="nav-item"><a href="{{ route('today.order') }}" class="nav-link">Today's Order</a></li>
-          <li class="nav-item"><a href="{{ route('today.delevered') }}" class="nav-link">Today Delevered</a></li>
-          <li class="nav-item"><a href="{{ route('this.month') }}" class="nav-link">This Month</a></li>
-          <li class="nav-item"><a href="{{ route('search.report') }}" class="nav-link">Search Report</a></li>
+          <li class="nav-item"><a href="{{ route('today.order') }}" class="nav-link">Demandes du jour</a></li>
+          <li class="nav-item"><a href="{{ route('today.delevered') }}" class="nav-link">Traitées aujourd’hui</a></li>
+          <li class="nav-item"><a href="{{ route('this.month') }}" class="nav-link">Ce mois-ci</a></li>
+          <li class="nav-item"><a href="{{ route('search.report') }}" class="nav-link">Recherche</a></li>
         </ul>
         @else
         @endif
@@ -165,13 +165,13 @@
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
             <i class="menu-item-icon icon ion-ios-paper-outline tx-22"></i>
-            <span class="menu-item-label">User Role</span>
+            <span class="menu-item-label">Utilisateurs admin</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item"><a href="{{ route('create.admin') }}" class="nav-link">Create User</a></li>
-            <li class="nav-item"><a href="{{ route('create.user.role') }}" class="nav-link">All User</a></li>
+            <li class="nav-item"><a href="{{ route('create.admin') }}" class="nav-link">Créer un compte</a></li>
+            <li class="nav-item"><a href="{{ route('create.user.role') }}" class="nav-link">Tous les comptes</a></li>
         </ul>
         @else
         @endif
@@ -186,7 +186,7 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item"><a href="{{route('admin.newsletter')}}" class="nav-link">Newsletter</a></li>
+            <li class="nav-item"><a href="{{route('admin.newsletter')}}" class="nav-link">Inscrits</a></li>
         </ul>
         @else
         @endif
@@ -196,13 +196,13 @@
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
             <i class="menu-item-icon ion-ios-filing-outline tx-20"></i>
-            <span class="menu-item-label">Review-Messages</span>
+            <span class="menu-item-label">Messages &amp; avis</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item"><a href="{{route('admin.new.contact')}}" class="nav-link">New Messages</a></li>
-            <li class="nav-item"><a href="{{route('admin.all.contact')}}" class="nav-link">All Messages</a></li>
+            <li class="nav-item"><a href="{{route('admin.new.contact')}}" class="nav-link">Nouveaux messages</a></li>
+            <li class="nav-item"><a href="{{route('admin.all.contact')}}" class="nav-link">Tous les messages</a></li>
         </ul>
         @else
         @endif
@@ -212,12 +212,12 @@
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
             <i class="menu-item-icon ion-ios-gear-outline tx-20"></i>
-            <span class="menu-item-label">Site Settings</span>
+            <span class="menu-item-label">Paramètres</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item"><a href="{{ route('admin.site.setting') }}" class="nav-link">Site Setting</a></li>
+            <li class="nav-item"><a href="{{ route('admin.site.setting') }}" class="nav-link">Réglages du site</a></li>
         </ul>
         @else
         @endif
@@ -227,12 +227,12 @@
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
             <i class="menu-item-icon ion-ios-gear-outline tx-20"></i>
-            <span class="menu-item-label">Database Backup</span>
+            <span class="menu-item-label">Sauvegarde BDD</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item"><a href="{{ route('admin.database.backup') }}" class="nav-link">Database Backup </a></li>
+            <li class="nav-item"><a href="{{ route('admin.database.backup') }}" class="nav-link">Sauvegardes</a></li>
         </ul>
         @else
         @endif
@@ -264,9 +264,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-header wd-200">
                 <ul class="list-unstyled user-profile-nav">
-                    <li><a href="#"><i class="icon ion-ios-person-outline"></i> Edit Profile</a></li>
-                    <li><a href="{{route('admin.password.change')}}"><i class="icon ion-ios-gear-outline"></i> Password Change</a></li>
-                    <li><a href="{{ route('admin.logout') }}"><i class="icon ion-power"></i> Sign Out</a></li>
+                    <li><a href="#"><i class="icon ion-ios-person-outline"></i> Profil</a></li>
+                    <li><a href="{{route('admin.password.change')}}"><i class="icon ion-ios-gear-outline"></i> Mot de passe</a></li>
+                    <li><a href="{{ route('admin.logout') }}"><i class="icon ion-power"></i> Déconnexion</a></li>
                 </ul>
             </div><!-- dropdown-menu -->
           </div><!-- dropdown -->

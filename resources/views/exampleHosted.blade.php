@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="SSLCommerz">
-    <title>BariWala.com - Checkout Hosted | SSLCommerz</title>
+    <title>Tedia-investisment — Paiement (hébergé) | SSLCommerz</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -31,9 +31,9 @@
 <body class="bg-light">
 <div class="container">
     <div class="py-5 text-center">
-        <h1 style="color: blue">BariWala.com</h1>
-        <h2>Payment Authorization Form</h2>
-        <p>Powerd by: SSLCommerz</p>
+        <h1 style="color: blue">Tedia-investisment</h1>
+        <h2>Paiement sécurisé</h2>
+        <p>Passerelle : SSLCommerz (à remplacer si vous utilisez un PSP local en FCFA)</p>
         {{-- <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. We have provided this sample form for understanding Hosted Checkout Payment with SSLCommerz.</p> --}}
     </div>
 
@@ -51,7 +51,7 @@
 
     <div class="row">
         <div class="col-md-8 offset-md-2 order-md-1">
-            <h4 class="mb-3">Billing address</h4>
+            <h4 class="mb-3">Adresse de facturation</h4>
             <form action="{{ url('/checkout') }}" method="POST" class="needs-validation">
                 <input type="hidden" value="{{ csrf_token() }}" name="_token" />
 
@@ -64,35 +64,36 @@
 
                 <div class="row">
                     <div class="col-md-5 mb-3">
-                        <label for="country">Country</label>
+                        <label for="country">Pays</label>
                         <select class="custom-select d-block w-100" id="country" required>
-                            <option value="">Choose...</option>
-                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="">Choisir…</option>
+                            <option value="Togo" selected>Togo</option>
                         </select>
                         <div class="invalid-feedback">
-                            Please select a valid country.
+                            Veuillez choisir un pays.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="state">State</label>
+                        <label for="state">Région / ville</label>
                         <select class="custom-select d-block w-100" id="state" required>
-                            <option value="">Choose...</option>
-                            <option value="Dhaka">Dhaka</option>
-                            <option value="Chattogram">Chattogram</option>
-                            <option value="Rajshahi">Rajshahi</option>
-                            <option value="Khulna">Khulna</option>
-                            <option value="Barishal">Barishal</option>
-                            <option value="Sylhet">Sylhet</option>
+                            <option value="">Choisir…</option>
+                            <option value="Lomé">Lomé</option>
+                            <option value="Kara">Kara</option>
+                            <option value="Sokodé">Sokodé</option>
+                            <option value="Kpalimé">Kpalimé</option>
+                            <option value="Atakpamé">Atakpamé</option>
+                            <option value="Dapaong">Dapaong</option>
+                            <option value="Tsévié">Tsévié</option>
                         </select>
                         <div class="invalid-feedback">
-                            Please provide a valid state.
+                            Veuillez indiquer une région ou une ville.
                         </div>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <label for="zip">Zip</label>
-                        <input type="text" class="form-control" id="zip" placeholder="Enter Zip Code" required>
+                        <label for="zip">Code postal</label>
+                        <input type="text" class="form-control" id="zip" placeholder="Code postal" required>
                         <div class="invalid-feedback">
-                            Zip code required.
+                            Code postal requis.
                         </div>
                     </div>
                 </div>
@@ -100,20 +101,20 @@
                 <hr class="mb-4">
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="save-info">
-                    <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                    <label class="custom-control-label" for="save-info">Enregistrer pour la prochaine fois</label>
                 </div>
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to Checkout</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Continuer vers le paiement</button>
             </form>
         </div>
     </div>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2020 BariWala.com</p>
+        <p class="mb-1">&copy; {{ date('Y') }} Tedia-investisment</p>
         <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Privacy</a></li>
-            <li class="list-inline-item"><a href="#">Terms</a></li>
-            <li class="list-inline-item"><a href="#">Support</a></li>
+            <li class="list-inline-item"><a href="#">Confidentialité</a></li>
+            <li class="list-inline-item"><a href="#">Conditions</a></li>
+            <li class="list-inline-item"><a href="#">Assistance</a></li>
         </ul>
     </footer>
 </div>

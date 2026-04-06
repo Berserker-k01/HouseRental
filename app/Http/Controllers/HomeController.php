@@ -47,20 +47,20 @@ class HomeController extends Controller
                       $user->save();
                       Auth::logout();
                       $notification=array(
-                        'message'=>'Password Changed Successfully ! Now Login with Your New Password',
+                        'message'=>'Mot de passe modifié. Connectez-vous avec votre nouveau mot de passe.',
                         'alert-type'=>'success'
                          );
                        return Redirect()->route('login')->with($notification);
                  }else{
                      $notification=array(
-                        'message'=>'New password and Confirm Password not matched!',
+                        'message'=>'Le nouveau mot de passe et la confirmation ne correspondent pas.',
                         'alert-type'=>'error'
                          );
                        return Redirect()->back()->with($notification);
               }
       }else{
         $notification=array(
-                'message'=>'Old Password not matched!',
+                'message'=>'L’ancien mot de passe est incorrect.',
                 'alert-type'=>'error'
                  );
                return Redirect()->back()->with($notification);
@@ -73,7 +73,7 @@ class HomeController extends Controller
         // $logout= Auth::logout();
             Auth::logout();
             $notification=array(
-                'message'=>'Successfully Logout',
+                'message'=>'Vous êtes déconnecté.',
                 'alert-type'=>'success'
                  );
              return Redirect()->to('/')->with($notification);

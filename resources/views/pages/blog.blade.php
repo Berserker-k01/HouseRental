@@ -12,11 +12,7 @@
           <div class="col-lg-9 offset-lg-1 pt-5 mt-5" data-aos="zoom-in">
             <div class="shadow-lg rounded" style=" background:#AC5488; opacity: .8; color:white">
                 <h1 class="home_title text-center p-5 mt-5 shadow-lg">
-                    @if(session()->get('lang') == 'bangla')
-                        আমাদের ব্লগে আপনাকে স্বাগতম
-                    @else
-                        Welcome to Our Blog
-                    @endif
+                    Bienvenue sur notre blog
                 </h1>
             </div>
         </div>
@@ -41,19 +37,11 @@
 					<div class="blog_post bg-white"><a class="text-dark" href="{{url('blog/description/'.$row->id)}}">
 						<div class="blog_image" style="background-image:url({{ asset($row->post_image) }})"></div>
 						<div class="blog_text">
-                                @if(session()->get('lang') == 'bangla')
-                                    {{ $row->post_title_bn }}
-                                @else
                                     {{ $row->post_title_en }}
-                                @endif
                             </a>
 						</div>
 						<div class="blog_button"><a href="{{url('blog/description/'.$row->id)}}">
-							 @if(session()->get('lang') == 'bangla')
-						    	বিস্তারিত পড়ুন...
-							@else
-						        Continue Reading...
-						    @endif
+						    	Lire la suite…
 					    </a></div>
 					</div>
                     @endforeach

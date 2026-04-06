@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\Http\Controllers\Admin;
 
@@ -54,7 +54,7 @@ class OrderController extends Controller
         DB::table('interested_properties')->where('id',$id)->delete();
 
         $notification = array(
-            'message'=>'Successfully Property Order Deleted',
+            'message'=>'Demande supprimée.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -64,7 +64,7 @@ class OrderController extends Controller
     public function markAsRead($id){
         DB::table('interested_properties')->where('id',$id)->update(['status'=> 1]);
         $notification=array(
-                    'message'=>'Successfully Order Marked as Responded',
+                    'message'=>'Demande marquée comme traitée.',
                     'alert-type'=>'success'
                 );
         return Redirect()->back()->with($notification);
@@ -74,7 +74,7 @@ class OrderController extends Controller
     public function markAsUnRead($id){
         DB::table('interested_properties')->where('id',$id)->update(['status'=> 0]);
         $notification=array(
-                    'message'=>'Successfully Order Marked as New Order',
+                    'message'=>'Demande marquée comme nouvelle.',
                     'alert-type'=>'success'
                 );
         return Redirect()->back()->with($notification);

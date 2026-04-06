@@ -1,0 +1,17 @@
+{
+    "Register": "Inscription",
+    "Name": "Nom",
+    "E-Mail Address": "Adresse e-mail",
+    "Password": "Mot de passe",
+    "Confirm Password": "Confirmer le mot de passe",
+    "Login": "Connexion",
+    "Remember Me": "Se souvenir de moi",
+    "Forgot Your Password?": "Mot de passe oublié ?",
+    "Reset Password": "Réinitialiser le mot de passe",
+    "Send Password Reset Link": "Envoyer le lien de réinitialisation",
+    "Verify Your Email Address": "Vérifiez votre adresse e-mail",
+    "Please confirm your password before continuing.": "Veuillez confirmer votre mot de passe avant de continuer.",
+    "Change Your Password": "Modifier votre mot de passe",
+    "Old Password": "Ancien mot de passe",
+    "Password Change": "Enregistrer le nouveau mot de passe"
+}

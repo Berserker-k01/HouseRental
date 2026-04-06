@@ -21,13 +21,13 @@ class WishlistController extends Controller
 
         if (Auth::check()) {
             if ($check) {
-                return response()->json(['error' => 'This Property already has on your Wishlist']);
+                return response()->json(['error' => 'Ce bien est déjà dans vos favoris.']);
             }else{
                 DB::table('wishlists')->insert($data);
-                return response()->json(['success' => 'Successfully Added on your wishlist']);
+                return response()->json(['success' => 'Ajouté à vos favoris.']);
             }
         }else{
-            return response()->json(['error' => 'At first login to your Account']);
+            return response()->json(['error' => 'Connectez-vous pour ajouter des favoris.']);
         }
 
     }
@@ -47,21 +47,21 @@ class WishlistController extends Controller
     	if (Auth::check()) {
     		if ($check) {
                  $notification=array(
-                    'message'=>'This Property already has on your Wishlist',
+                    'message'=>'Ce bien est déjà dans vos favoris.',
                     'alert-type'=>'error'
                 );
                 return Redirect()->back()->with($notification);
     		}else{
                 DB::table('wishlists')->insert($data);
                 $notification=array(
-                    'message'=>'Successfully Added on your Wishlist',
+                    'message'=>'Ajouté à vos favoris.',
                     'alert-type'=>'success'
                 );
                 return Redirect()->back()->with($notification);
     		}
     	}else{
             $notification=array(
-                'message'=>'At first login to your Account',
+                'message'=>'Connectez-vous pour ajouter des favoris.',
                 'alert-type'=>'warning'
             );
             return Redirect()->back()->with($notification);
@@ -115,7 +115,7 @@ class WishlistController extends Controller
         // return response()->json(['success' => 'Your property order request has been recorded.']);
 
         $notification = array(
-            'message'=>'Your property order request has been recorded.',
+            'message'=>'Votre demande a bien été enregistrée.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);

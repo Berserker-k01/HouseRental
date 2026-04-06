@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "tedia-investisment/platform",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Tedia-investisment — plateforme d’investissement et de location immobilière (Laravel).",
     "keywords": [
         "framework",
         "laravel"

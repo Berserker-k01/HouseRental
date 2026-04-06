@@ -20,7 +20,7 @@
                     <th class="wd-10p">Phone</th>
                     <th class="wd-10p">Email</th>
                     <th class="wd-10p">Date</th>
-                    <th class="wd-10p">Price (৳)</th>
+                    <th class="wd-10p">Prix (FCFA)</th>
                     <th class="wd-10p">Status</th>
                     <th class="wd-10p">Action</th>
                     <th></th>
@@ -38,9 +38,9 @@
                     {{-- <td>{{date("d-m-Y h:i A")}}</td> --}}
                     <td>
                         @if ($row->discount_price == NULL)
-                            {{ $row->price }}
+                            {{ $row->price }} FCFA
                         @else
-                            {{ $row->discount_price }} (D)
+                            {{ $row->discount_price }} FCFA (D)
                         @endif
                     </td>
                     <td>

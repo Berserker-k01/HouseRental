@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -27,7 +27,7 @@ class CouponController extends Controller
         $coupon=DB::table('coupons')->insert($data);
 
         $notification = array(
-            'message'=>'Successfully Coupon Inserted',
+            'message'=>'Coupon créé.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -38,7 +38,7 @@ class CouponController extends Controller
         DB::table('coupons')->where('id',$id)->delete();
 
         $notification = array(
-            'message'=>'Successfully Coupon Deleted',
+            'message'=>'Coupon supprimé.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -58,7 +58,7 @@ class CouponController extends Controller
         $coupon= DB::table('coupons')->where('id',$id)->update($data);
 
         $notification = array(
-            'message'=>'Successfully Coupon Updated',
+            'message'=>'Coupon mis à jour.',
             'alert-type'=>'success'
         );
         return redirect()->route('coupons')->with($notification);
@@ -80,7 +80,7 @@ class CouponController extends Controller
         DB::table('newsletters')->where('id',$id)->delete();
 
         $notification = array(
-            'message'=>'Successfully Deleted',
+            'message'=>'Suppression effectuée.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -113,7 +113,7 @@ class CouponController extends Controller
         DB::table('contacts')->where('id',$id)->delete();
 
         $notification = array(
-            'message'=>'Successfully Contact-Message Deleted',
+            'message'=>'Message supprimé.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -135,7 +135,7 @@ class CouponController extends Controller
     public function markAsRead($id){
         DB::table('contacts')->where('id',$id)->update(['status'=> 1]);
         $notification=array(
-                'message'=>'Successfully message marked as read',
+                'message'=>'Message marqué comme lu.',
                 'alert-type'=>'success'
             );
         return Redirect()->back()->with($notification);
@@ -145,7 +145,7 @@ class CouponController extends Controller
     public function markAsUnRead($id){
         DB::table('contacts')->where('id',$id)->update(['status'=> 0]);
         $notification=array(
-                'message'=>'Message marked as Unread',
+                'message'=>'Message marqué comme non lu.',
                 'alert-type'=>'success'
             );
         return Redirect()->back()->with($notification);
@@ -155,7 +155,7 @@ class CouponController extends Controller
     public function showReview($id){
         DB::table('contacts')->where('id',$id)->update(['review'=> 1]);
         $notification=array(
-                'message'=>'Review added in website',
+                'message'=>'Avis affiché sur le site.',
                 'alert-type'=>'success'
             );
         return Redirect()->back()->with($notification);
@@ -165,7 +165,7 @@ class CouponController extends Controller
     public function dontShowReview($id){
         DB::table('contacts')->where('id',$id)->update(['review'=> 0]);
         $notification=array(
-                'message'=>'Removed this as a review',
+                'message'=>'Avis retiré du site.',
                 'alert-type'=>'success'
             );
         return Redirect()->back()->with($notification);

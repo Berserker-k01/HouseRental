@@ -10,7 +10,7 @@
 
 <div class="sl-mainpanel">
     <nav class="breadcrumb sl-breadcrumb">
-    <a class="breadcrumb-item" href="#">BariWala</a>
+    <a class="breadcrumb-item" href="#">Tedia-investisment</a>
     <span class="breadcrumb-item active">Property Add Section</span>
     </nav>
     <div class="sl-pagebody">
@@ -94,8 +94,8 @@
                     <input type="text" class="form-control" name="area" id="bedromm" placeholder="Enter Area (sqft.)" required>
                 </div>
                 <div class="col-md-3 mb-3 pr-4">
-                    <label for="price">Price (৳) :</label>
-                    <input type="text" class="form-control" name="price" id="price" placeholder="Enter Price (৳)" required>
+                    <label for="price">Prix (FCFA) :</label>
+                    <input type="text" class="form-control" name="price" id="price" placeholder="Enter Prix (FCFA)" required>
                 </div>
                 <div class="col-md-3 mb-3 pr-4">
                     <label for="floor">Floor Level :</label>

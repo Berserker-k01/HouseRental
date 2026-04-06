@@ -22,7 +22,7 @@ class FrontController extends Controller
         $category= DB::table('newsletters')->insert($data);
 
         $notification = array(
-            'message'=>'Thanks for Subscribing',
+            'message'=>'Merci pour votre inscription à la newsletter.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -46,7 +46,7 @@ class FrontController extends Controller
         $contact= DB::table('contacts')->insert($data);
 
         $notification = array(
-            'message'=>'Thanks for your Feedback! We will replay you soon',
+            'message'=>'Merci pour votre message. Nous vous répondrons rapidement.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -90,7 +90,7 @@ class FrontController extends Controller
     	$data['video']=$request->video;
         $data['purpose']=$request->purpose;
         $data['status']=0;
-        $data['property_code']= 'BW-'.mt_rand(100000,999999);
+        $data['property_code']= 'TI-'.mt_rand(100000,999999);
         $data['map_link']=$request->map_link;
         $data['date']=date('d-m-y');
         $data['month']=date('F');
@@ -200,13 +200,13 @@ class FrontController extends Controller
 
         if ($profile) {
             $notification=array(
-                    'message'=>'Successfully Profile Updated',
+                    'message'=>'Profil mis à jour.',
                     'alert-type'=>'success'
             );
             return redirect()->route('home')->with($notification);
         }else{
             $notification=array(
-                    'message'=>'Nothing To Update',
+                    'message'=>'Aucune modification à enregistrer.',
                     'alert-type'=>'success'
             );
             return redirect()->route('home')->with($notification);

@@ -1,125 +1,89 @@
-<div align="center">
-  
-# Online Based HouseRental System
+# Tedia-investisment
 
-</div>
+Plateforme web d’**investissement et de location immobilière**, basée sur Laravel. Interface entièrement en **français**.
 
-<p align="center"><img src="https://primelegal.in/wp-content/uploads/2021/06/house-rent-concept-background_23-2147779983.jpg" height="400px"></p>
+## Fonctionnalités principales
 
-## Features
+- Authentification utilisateurs et administration dédiée
+- Gestion des villes et sous-zones
+- Annonces immobilières (administration et dépôt par les utilisateurs)
+- Galerie multi-images, liste de souhaits, recherche
+- Blog, bons de réduction, newsletter, contact
+- Paiement en ligne (SSL Commerz), commandes et rapports
+- Paramètres du site et sauvegarde de base de données
 
-> Authentication
+## Prérequis
 
-> City/Subcity
+- PHP 7.4 ou 8.0
+- Composer
+- Node.js et npm (assets front)
 
-> Property setup
+## Installation
 
-> Upload property by User + Admin
+```bash
+git clone <votre-depot>
+cd HouseRental
+cp .env.example .env
+```
 
-> Multiple image upload
+Configurer la base de données et `APP_NAME="Tedia-investisment"` dans `.env`, puis :
 
-> Discount
+```bash
+composer install
+php artisan key:generate
+php artisan migrate
+npm install
+npm run dev
+```
 
-> Coupon
+Lancer le serveur de développement (`php artisan serve`) ou configurer votre hôte web (par ex. `public/` comme racine).
 
-> Wishlist
+## Avec Docker
 
-> Google Map
+Prérequis : [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows / Mac) ou Docker Engine + Compose sur Linux.
 
-> Facebook Comment Box
+1. À la racine du projet, créer le fichier d’environnement :
+   ```bash
+   copy .env.docker.example .env
+   ```
+   (Sous Linux / macOS : `cp .env.docker.example .env`.)  
+   Le mot de passe MySQL par défaut est **`secret`** (`DB_PASSWORD` dans `.env`, repris pour `MYSQL_ROOT_PASSWORD`). Le healthcheck MySQL utilise la variable du conteneur.
 
-> Review
+2. Construire et démarrer les conteneurs :
+   ```bash
+   docker compose up -d --build
+   ```
 
-> Nearby Properties
+3. Initialiser Laravel (clé + migrations + lien storage) :
+   ```bash
+   docker compose exec app php artisan key:generate
+   docker compose exec app php artisan migrate
+   docker compose exec app php artisan storage:link
+   ```
 
-> Property Details
+4. Compiler les assets front (une fois) :
+   ```bash
+   docker compose run --rm node
+   ```
+   Pour régénérer à chaque modification : `docker compose run --rm node sh -c "npm install && npm run watch"` (laisser le terminal ouvert).
 
-> Order
+5. Ouvrir l’application : **http://localhost:9080** (ou le port défini par `APP_PORT` dans `.env`).  
+   Si une autre application utilise déjà ce port sur votre PC, changez `APP_PORT` et `APP_URL` (même numéro de port) puis relancez `docker compose up -d`.  
+   MySQL est exposé sur le port **3307** de la machine hôte (`localhost:3307`).
 
-> Online Payment Gateway (SSL Commerz)
+Variables utiles dans un fichier `.env` à la racine (lue par Compose) : `APP_PORT` (défaut 9080), `MYSQL_PORT` (défaut 3307), `DB_DATABASE`, `DB_PASSWORD`.
 
-> Report
+## Nom du projet
 
-> Mail (QUEUE)
+Le produit et la marque affichés sont **Tedia-investisment**. Le nom d’application par défaut est défini dans `config/app.php` et via `APP_NAME` dans `.env`.
 
-> User role
+## Langue
 
-> Newslater
+La locale par défaut est le **français** (`fr`), avec fichiers dans `resources/lang/fr/`.
 
-> Blog
+## Zone géographique & monnaie
 
-> Multiple language (Bangla/English)
+- **Pays cible** : Togo (fuseau horaire par défaut : `Africa/Lome` via `APP_TIMEZONE`).
+- **Devise** : **FCFA** (code ISO **XOF**), configurable avec `APP_CURRENCY` et `APP_CURRENCY_CODE` dans `.env`.
 
-> Search
-
-> New Arrivals / Best Rated Properties / Trend
-
-> Socialite
-
-> Site Settings
-
-> Database Backup
-
-
-## Packages
-
-> Image Intervention : http://image.intervention.io/
-
-> Online Payment Gateway (SSL Commerz) : https://github.com/sslcommerz/SSLCommerz-Laravel
-
-> Socialite          : https://www.tutsmake.com/laravel-6-google-login-tutorial-with-socialite-demo-example/
-
-> Facebook Comment Plugin : https://developers.facebook.com/docs/plugins/comments/
-
-> Alert (sweetalert2) : https://sweetalert2.github.io/
-
-> Mail Create, Run: **_php artisan make:mail InvoiceMail_**
-
-
-## Database Schema
-
-> Visit this - https://drawsql.app/shahed-chy-suzan/diagrams/bariwala-com
-
-## ERD Diagram
-
-> Visit this - https://erdplus.com/edit-diagram/f4eb32e8-3d86-40c1-8a9f-afede0bafa07 
-
-## Use Case Diagram for Admin
-
-> Visit this - https://app.creately.com/diagram/A25zPqqAxut/edit
-
-## Use Case Diagram for User
-
-> Visit this - https://app.creately.com/diagram/aog4m47MtYE/edit
-
-## Activity Diagram for Admin
-
-> Visit this - https://app.creately.com/diagram/ii54drZWGc1/edit
-
-## Sequence Diagram of Login
-
-> Visit this - https://app.creately.com/diagram/Rk947P2vCL2/edit
-
-## Sequence Diagram of Bariwala.com
-
-> Visit this - https://app.creately.com/diagram/NZvm0EKZzhm/edit
-
-
-## After clone or download this project, please follow the instructions
-
-> Clone the repository with **_git clone https://github.com/Shahed-Chy-Suzan/HouseRental.git_**
-
-> Run **_cd HouseRental_**
-
-> Copy **.env.example** file to **.env** and edit **Database** credentials there
-
-> Run **_composer install_**
-
-> Run **_php artisan key:generate_**
-
-> Run **_php artisan migrate_**
-
-> Run **_npm install_**
-
-> Go to any browser and enter this URL  **_localhost/HouseRental_**
-
+> **Paiement en ligne** : l’exemple SSLCommerz fourni est historiquement orienté Bangladesh / BDT. Les montants affichés sont en FCFA ; pour encaisser réellement en XOF au Togo, prévoyez un prestataire local (Mobile Money, carte, etc.) et adaptez le contrôleur de paiement.

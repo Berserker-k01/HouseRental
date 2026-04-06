@@ -3,7 +3,7 @@
 
     <div class="sl-mainpanel">
       <nav class="breadcrumb sl-breadcrumb">
-        <a class="breadcrumb-item" href="#">Bariwala</a>
+        <a class="breadcrumb-item" href="#">Tedia-investisment</a>
         <span class="breadcrumb-item active">Admin Section</span>
       </nav>
       <div class="sl-pagebody">

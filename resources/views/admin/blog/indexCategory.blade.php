@@ -18,7 +18,7 @@
                 <tr>
                   <th class="wd-15p">id</th>
                   <th class="wd-15p">Category Name English</th>
-                  <th class="wd-15p">Category Name Bangla</th>
+                  <th class="wd-15p">Libellé secondaire (optionnel)</th>
                   <th class="wd-20p">Action</th>
                 </tr>
               </thead>

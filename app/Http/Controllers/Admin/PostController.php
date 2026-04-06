@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\Http\Controllers\Admin;
 
@@ -35,7 +35,7 @@ class PostController extends Controller
         DB::table('post_category')->insert($data);
 
         $notification=array(
-            'message'=>'Successfully Category Inserted',
+            'message'=>'Catégorie créée.',
             'alert-type'=>'success'
         );
         return Redirect()->back()->with($notification);
@@ -46,7 +46,7 @@ class PostController extends Controller
         DB::table('post_category')->where('id',$id)->delete();
 
         $notification=array(
-                'message'=>'Successfully Category Deleted ',
+                'message'=>'Catégorie supprimée.',
                 'alert-type'=>'success'
         );
         return Redirect()->back()->with($notification);
@@ -65,7 +65,7 @@ class PostController extends Controller
 
         DB::table('post_category')->where('id',$id)->update($data);
         $notification=array(
-                'message'=>'Successfully Post Updated',
+                'message'=>'Catégorie mise à jour.',
                 'alert-type'=>'success'
             );
         return Redirect()->route('postCategory.name')->with($notification);
@@ -103,7 +103,7 @@ class PostController extends Controller
                 $data['post_image']='public/media/post/'.$image_one_name;
                 DB::table('posts')->insert($data);
                 $notification=array(
-                     'message'=>'Successfully Post Inserted',
+                     'message'=>'Article publié.',
                      'alert-type'=>'success'
                     );
                 return Redirect()->back()->with($notification);
@@ -112,7 +112,7 @@ class PostController extends Controller
     		 $data['post_image']='';
               DB::table('posts')->insert($data);
                $notification=array(
-                     'message'=>'Successfully Post Inserted without Image',
+                     'message'=>'Article publié (sans image).',
                      'alert-type'=>'success'
                     );
                 return Redirect()->back()->with($notification);
@@ -138,7 +138,7 @@ class PostController extends Controller
         DB::table('posts')->where('id',$id)->delete();
 
     	$notification=array(
-                'message'=>'Successfully Post Deleted',
+                'message'=>'Article supprimé.',
                 'alert-type'=>'success'
         );
         return Redirect()->back()->with($notification);
@@ -171,7 +171,7 @@ class PostController extends Controller
                 $data['post_image']='public/media/post/'.$image_one_name;
                 DB::table('posts')->where('id',$id)->update($data);
                 $notification=array(
-                     'message'=>'Successfully Post Updated',
+                     'message'=>'Article mis à jour.',
                      'alert-type'=>'success'
                     );
                 return Redirect()->route('all.blogpost')->with($notification);
@@ -180,7 +180,7 @@ class PostController extends Controller
     		   $data['post_image']=$oldimage;
                DB::table('posts')->where('id',$id)->update($data);
                $notification=array(
-                     'message'=>'Successfully Post Updated',
+                     'message'=>'Article mis à jour.',
                      'alert-type'=>'success'
                     );
                 return Redirect()->route('all.blogpost')->with($notification);

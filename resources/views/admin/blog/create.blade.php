@@ -4,7 +4,7 @@
 
     <div class="sl-mainpanel">
       <nav class="breadcrumb sl-breadcrumb">
-        <a class="breadcrumb-item" href="#">BariWala</a>
+        <a class="breadcrumb-item" href="#">Tedia-investisment</a>
         <span class="breadcrumb-item active">Blog Section</span>
       </nav>
       <div class="sl-pagebody">
@@ -54,7 +54,7 @@
 
               <div class="col-lg-12">
               	<div class="form-group">
-                  <label class="form-control-label">Product Details (Bangla)<span class="tx-danger">*</span></label>
+                  <label class="form-control-label">Contenu secondaire (optionnel)<span class="tx-danger">*</span></label>
                    <textarea class="form-control" id="summernote1" name="details_bn">
 
                    </textarea>

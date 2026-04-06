@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\Http\Controllers\Admin;
 
@@ -108,7 +108,7 @@ class ReportController extends Controller
 
         DB::table('admins')->insert($data);
         $notification=array(
-                'message'=>'Child Admin Created Successfully',
+                'message'=>'Administrateur créé.',
                 'alert-type'=>'success'
             );
         return Redirect()->back()->with($notification);
@@ -118,7 +118,7 @@ class ReportController extends Controller
     public function UserDelete($id){
         DB::table('admins')->where('id',$id)->delete();
         $notification=array(
-                'message'=>' Admin Deleted Successfully',
+                'message'=>'Administrateur supprimé.',
                 'alert-type'=>'success'
             );
         return Redirect()->back()->with($notification);
@@ -153,13 +153,13 @@ class ReportController extends Controller
 
         if ($update) {
             $notification=array(
-                    'message'=>'Child Admin Updated Successfully',
+                    'message'=>'Administrateur mis à jour.',
                     'alert-type'=>'success'
             );
                 return Redirect()->route('create.user.role')->with($notification);
         }else{
             $notification=array(
-                'message'=>'Nothing To Updated ',
+                'message'=>'Aucune modification.',
                 'alert-type'=>'success'
         );
             return Redirect()->route('create.user.role')->with($notification);

@@ -22,12 +22,14 @@ class SslCommerzNotification extends AbstractSslCommerz
         $this->setStorePassword($this->config['apiCredentials']['store_password']);
     }
 
-    public function orderValidate($post_data, $trx_id = '', $amount = 0, $currency = "BDT")
+    public function orderValidate($post_data, $trx_id = '', $amount = 0, $currency = 'XOF')
     {
         if ($post_data == '' && $trx_id == '' && !is_array($post_data)) {
             $this->error = "Please provide valid transaction ID and post request data";
             return $this->error;
         }
+
+        $currency = $currency ?: config('app.currency_code', 'XOF');
 
         $validation = $this->validate($trx_id, $amount, $currency, $post_data);
 
@@ -109,24 +111,18 @@ class SslCommerzNotification extends AbstractSslCommerz
 
                     # GIVE SERVICE
                     if ($status == "VALID" || $status == "VALIDATED") {
-                        if ($merchant_trans_currency == "BDT") {
-                            if (trim($merchant_trans_id) == trim($tran_id) && (abs($merchant_trans_amount - $amount) < 1) && trim($merchant_trans_currency) == trim('BDT')) {
+                        if (in_array($merchant_trans_currency, ['BDT', 'XOF'], true)) {
+                            if (trim($merchant_trans_id) == trim($tran_id) && (abs($merchant_trans_amount - $amount) < 1) && trim($merchant_trans_currency) == trim($currency_type)) {
                                 return true;
-                            } else {
-                                # DATA TEMPERED
-                                $this->error = "Data has been tempered";
-                                return false;
                             }
-                        } else {
-                            //echo "trim($merchant_trans_id) == trim($tran_id) && ( abs($merchant_trans_amount-$currency_amount) < 1 ) && trim($merchant_trans_currency)==trim($currency_type)";
-                            if (trim($merchant_trans_id) == trim($tran_id) && (abs($merchant_trans_amount - $currency_amount) < 1) && trim($merchant_trans_currency) == trim($currency_type)) {
-                                return true;
-                            } else {
-                                # DATA TEMPERED
-                                $this->error = "Data has been tempered";
-                                return false;
-                            }
+                            $this->error = "Data has been tempered";
+                            return false;
                         }
+                        if (trim($merchant_trans_id) == trim($tran_id) && (abs($merchant_trans_amount - $currency_amount) < 1) && trim($merchant_trans_currency) == trim($currency_type)) {
+                            return true;
+                        }
+                        $this->error = "Data has been tempered";
+                        return false;
                     } else {
                         # FAILED TRANSACTION
                         $this->error = "Failed Transaction";

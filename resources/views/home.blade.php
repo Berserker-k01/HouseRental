@@ -10,19 +10,19 @@
             <div class="row">
 
         <div class="col-md-7 mt-5 mr-5 ml-5" data-aos="fade-right">
-            <h3 class="bg-white p-2 mt-2 text-success" style="background-color: #e1f1e9e5; font-size:29px;">Profile Info :</h3>
+            <h3 class="bg-white p-2 mt-2 text-success" style="background-color: #e1f1e9e5; font-size:29px;">Mon profil</h3>
             <div class="bg-white">
                 <table class="table table-hover" style="font-size: 16px;">
                     <tr>
-                        <td class="border-0">Name :</td>                   <!--class="border-0"-->
-                        <td class="border-0">{{ $profile->name }}</td>    <!--class="border-0"-->
+                        <td class="border-0">Nom</td>
+                        <td class="border-0">{{ $profile->name }}</td>
                     </tr>
                     <tr>
-                        <td>Email :</td>
+                        <td>E-mail</td>
                         <td>{{ $profile->email }}</td>
                     </tr>
                     <tr>
-                        <td>Phone :</td>
+                        <td>Téléphone</td>
                         <td>{{ $profile->phone }}</td>
                     </tr>
                 </table>
@@ -42,12 +42,12 @@
                 </div>
 
                 <ul class="list-group list-group-flush ml-4">
-                <li class="list-group-item more moreS py-1"><a href="{{ route('password.change') }}" class="button-pipaluk button--inverted px-4 py-2 text-primary ml-4"> Change Password </a></li>
-                <li class="list-group-item more moreS py-1"><a href="{{ route('edit.user.profile') }}" class="button-pipaluk button--inverted px-5 py-2 text-primary ml-4"> Edit Profile </a></li>
-                <li class="list-group-item more moreS py-1"><a href="{{ route('add.property.user')}}" class="button-pipaluk button--inverted pl-4 py-2 text-primary ml-4" style="padding-right:35px;">Add My Property</a></li>
+                <li class="list-group-item more moreS py-1"><a href="{{ route('password.change') }}" class="button-pipaluk button--inverted px-4 py-2 text-primary ml-4">Changer le mot de passe</a></li>
+                <li class="list-group-item more moreS py-1"><a href="{{ route('edit.user.profile') }}" class="button-pipaluk button--inverted px-5 py-2 text-primary ml-4">Modifier le profil</a></li>
+                <li class="list-group-item more moreS py-1"><a href="{{ route('add.property.user')}}" class="button-pipaluk button--inverted pl-4 py-2 text-primary ml-4" style="padding-right:35px;">Publier une annonce</a></li>
                 </ul>
                 <div class="card-body more more2 p-1">
-                <a href="{{ route('user.logout') }}" class="btn bg-transparent text-white button-pipaluk button--inverted btn-block btn-sm py-1" style="font-size:15px;">Logout</a>
+                <a href="{{ route('user.logout') }}" class="btn bg-transparent text-white button-pipaluk button--inverted btn-block btn-sm py-1" style="font-size:15px;">Déconnexion</a>
                 </div>
             </div>
             </div>

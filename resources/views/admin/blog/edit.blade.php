@@ -59,7 +59,7 @@
 
               <div class="col-lg-12">
               	<div class="form-group">
-                  <label class="form-control-label">Product Details (Bangla)<span class="tx-danger">*</span></label>
+                  <label class="form-control-label">Contenu secondaire (optionnel)<span class="tx-danger">*</span></label>
                    <textarea class="form-control" id="summernote1" name="details_bn">
                    	{{ $post->details_bn }}
                    </textarea>

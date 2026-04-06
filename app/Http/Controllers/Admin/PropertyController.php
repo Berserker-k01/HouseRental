@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\Http\Controllers\Admin;
 use DB;
@@ -62,7 +62,7 @@ class PropertyController extends Controller
         unlink($image3);
         DB::table('user_properties')->where('id',$id)->delete();
         $notification=array(
-                    'message'=>'Successfully Property Deleted ',
+                    'message'=>'Annonce supprimée.',
                     'alert-type'=>'success'
                     );
         return Redirect()->back()->with($notification);
@@ -104,7 +104,7 @@ class PropertyController extends Controller
     public function uploadProperty($id){
         DB::table('user_properties')->where('id',$id)->update(['status'=>1]);
         $notification=array(
-                'message'=>'Property Upload Done',
+                'message'=>'Annonce publiée.',
                 'alert-type'=>'success'
         );
         return Redirect()->back()->with($notification);
@@ -114,7 +114,7 @@ class PropertyController extends Controller
     public function cancelProperty($id){
         DB::table('user_properties')->where('id',$id)->update(['status'=>4]);
         $notification=array(
-                'message'=>'Property Cancelled',
+                'message'=>'Annonce annulée.',
                 'alert-type'=>'error'
         );
         return Redirect()->back()->with($notification);
@@ -124,7 +124,7 @@ class PropertyController extends Controller
     public function DeliveryProgress($id){
         DB::table('user_properties')->where('id',$id)->update(['status'=>2]);
         $notification=array(
-                'message'=>'Sent To Delivery',
+                'message'=>'Passée en livraison.',
                 'alert-type'=>'success'
         );
         return Redirect()->back()->with($notification);
@@ -134,7 +134,7 @@ class PropertyController extends Controller
     public function pendingProperty($id){
         DB::table('user_properties')->where('id',$id)->update(['status'=>0]);
         $notification=array(
-                'message'=>'Sending Back To Pending Stage',
+                'message'=>'Remise en attente.',
                 'alert-type'=>'warning'
         );
         return Redirect()->back()->with($notification);
@@ -145,7 +145,7 @@ class PropertyController extends Controller
 
         DB::table('user_properties')->where('id',$id)->update(['status'=>3,'date'=>date('d-m-y'),'month'=>date('F'),'year'=>date('Y')]);
         $notification=array(
-                'message'=>'Property Delivered Successfully',
+                'message'=>'Annonce finalisée.',
                 'alert-type'=>'success'
         );
         return Redirect()->back()->with($notification);
@@ -264,14 +264,14 @@ class PropertyController extends Controller
         $update=DB::table('user_properties')->where('id',$id)->update($data);
         if ($update) {
             $notification=array(
-                    'message'=>'Successfully Property Updated',
+                    'message'=>'Annonce mise à jour.',
                     'alert-type'=>'success'
             );
             // return Redirect()->route('pending.user_property')->with($notification);
             return Redirect()->back()->with($notification);
         }else{
             $notification=array(
-                    'message'=>'Nothing To Update',
+                    'message'=>'Aucune modification.',
                     'alert-type'=>'success'
             );
             return Redirect()->back()->with($notification);
@@ -297,7 +297,7 @@ class PropertyController extends Controller
         $data['image_one']='public/media/user_property/'.$image_one_name;
         DB::table('user_properties')->where('id',$id)->update($data);
             $notification=array(
-                    'message'=>'Image One Updated',
+                    'message'=>'Image 1 mise à jour.',
                     'alert-type'=>'success'
                     );
             return Redirect()->back()->with($notification);
@@ -310,7 +310,7 @@ class PropertyController extends Controller
         $data['image_two']='public/media/user_property/'.$image_two_name;
         DB::table('user_properties')->where('id',$id)->update($data);
             $notification=array(
-                    'message'=>'Image Two Updated',
+                    'message'=>'Image 2 mise à jour.',
                     'alert-type'=>'success'
                     );
             return Redirect()->back()->with($notification);
@@ -322,7 +322,7 @@ class PropertyController extends Controller
         $data['image_three']='public/media/user_property/'.$image_three_name;
         DB::table('user_properties')->where('id',$id)->update($data);
             $notification=array(
-                    'message'=>'Image Three Updated',
+                    'message'=>'Image 3 mise à jour.',
                     'alert-type'=>'success'
                     );
             return Redirect()->back()->with($notification);
@@ -342,7 +342,7 @@ class PropertyController extends Controller
 
         DB::table('user_properties')->where('id',$id)->update($data);
             $notification=array(
-                    'message'=>'Image One and Two Updated',
+                    'message'=>'Images 1 et 2 mises à jour.',
                     'alert-type'=>'success'
                     );
             return Redirect()->back()->with($notification);
@@ -367,7 +367,7 @@ class PropertyController extends Controller
 
         DB::table('user_properties')->where('id',$id)->update($data);
             $notification=array(
-                    'message'=>'Image One and Two and Three Updated',
+                    'message'=>'Les trois images ont été mises à jour.',
                     'alert-type'=>'success'
                 );
             return Redirect()->back()->with($notification);

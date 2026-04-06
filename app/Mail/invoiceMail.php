@@ -31,7 +31,10 @@ class invoiceMail extends Mailable
     public function build()		//-------...---------//
     {
         $info = $this->data;
-        return $this->from('support.chittagong@bariwala.com')->view('mail.invoice',compact('info'))->subject('Successfully Property Submitted');
+        return $this->from(
+            config('mail.from.address'),
+            config('mail.from.name')
+        )->view('mail.invoice', compact('info'))->subject('Confirmation de dépôt d’annonce — '.config('app.name'));
     }
     
 }

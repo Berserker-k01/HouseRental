@@ -19,7 +19,7 @@
 
     <div class="sl-mainpanel">
       <nav class="breadcrumb sl-breadcrumb">
-        <a class="breadcrumb-item" href="{{url('admin/home')}}">BariWala</a>
+        <a class="breadcrumb-item" href="{{url('admin/home')}}">Tedia-investisment</a>
         <span class="breadcrumb-item active">Dashboard</span>
       </nav>
 
@@ -47,7 +47,7 @@
               </div><!-- card-header -->
               <div class="d-flex align-items-center justify-content-between">
                 <span class="sparkline2">5,3,9,6,5,9,7,3,5,2</span>
-                <h3 class="mg-b-0 tx-white tx-lato tx-bold">৳ {{ number_format($delevery) }}</h3>
+                <h3 class="mg-b-0 tx-white tx-lato tx-bold">{{ number_format($delevery) }} FCFA</h3>
               </div><!-- card-body -->
             </div><!-- card -->
           </div><!-- col-3 -->
@@ -60,7 +60,7 @@
               </div><!-- card-header -->
               <div class="d-flex align-items-center justify-content-between">
                 <span class="sparkline2">5,3,9,6,5,9,7,3,5,2</span>
-                <h3 class="mg-b-0 tx-white tx-lato tx-bold">৳ {{ number_format($month) }}</h3>
+                <h3 class="mg-b-0 tx-white tx-lato tx-bold">{{ number_format($month) }} FCFA</h3>
               </div><!-- card-body -->
             </div><!-- card -->
           </div><!-- col-3 -->
@@ -73,7 +73,7 @@
               </div><!-- card-header -->
               <div class="d-flex align-items-center justify-content-between">
                 <span class="sparkline2">5,3,9,6,5,9,7,3,5,2</span>
-                <h3 class="mg-b-0 tx-white tx-lato tx-bold">৳ {{ number_format($year) }}</h3>
+                <h3 class="mg-b-0 tx-white tx-lato tx-bold">{{ number_format($year) }} FCFA</h3>
               </div><!-- card-body -->
 
             </div><!-- card -->

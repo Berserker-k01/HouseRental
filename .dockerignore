@@ -1,0 +1,13 @@
+.git
+.gitignore
+.idea
+.vscode
+node_modules
+vendor
+.env
+.env.backup
+*.md
+storage/logs/*
+!storage/logs/.gitignore
+bootstrap/cache/*
+!bootstrap/cache/.gitignore

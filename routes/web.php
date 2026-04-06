@@ -22,8 +22,6 @@ Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
 Route::get('/callback/{provider}', 'SocialController@callback');
         //------------blog-------------------
 Route::get('blog/post','BlogController@blog')->name('blog.post');   //--nav--
-Route::get('language/bangla','BlogController@Bangla')->name('language.bangla');
-Route::get('language/english','BlogController@English')->name('language.english');
 Route::get('blog/description/{id}','BlogController@description');
 
 

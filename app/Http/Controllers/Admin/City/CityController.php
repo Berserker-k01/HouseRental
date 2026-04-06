@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\Http\Controllers\Admin\City;
 
@@ -32,13 +32,13 @@ class CityController extends Controller
 
         if($storecity){
             $notification = array(
-                'message'=>'Successfully City Inserted',
+                'message'=>'Ville ajoutée.',
                 'alert-type'=>'success'
             );
             return redirect()->back()->with($notification);
         }else{
             $notification = array(
-                'message'=>'Something went wrong!',
+                'message'=>'Une erreur est survenue.',
                 'alert-type'=>'error'
             );
             return redirect()->back()->with($notification);
@@ -60,7 +60,7 @@ class CityController extends Controller
         DB::table('cities')->where('id',$id)->delete();
 
         $notification = array(
-            'message'=>'Successfully City Deleted',
+            'message'=>'Ville supprimée.',
             'alert-type'=>'success'
         );
         return redirect()->back()->with($notification);
@@ -78,13 +78,13 @@ class CityController extends Controller
 
         if($updatecity){
             $notification = array(
-                'message'=>'Successfully City Updated',
+                'message'=>'Ville mise à jour.',
                 'alert-type'=>'success'
             );
             return redirect()->route('city')->with($notification);
         }else{
             $notification = array(
-                'message'=>' Nothing to Update!',
+                'message'=>'Aucune modification.',
                 'alert-type'=>'success'
             );
             return redirect()->route('city')->with($notification);

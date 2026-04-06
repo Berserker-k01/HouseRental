@@ -81,8 +81,8 @@
             <input type="text" class="form-control" name="area" placeholder="Enter Area (sqft.)" id="bedromm" required>
         </div>
         <div class="col-md-4 mb-3 pr-4">
-            <label for="price">Price (৳) :</label>
-            <input type="text" class="form-control" name="price" placeholder="Enter Price (৳)" id="price" required>
+            <label for="price">Prix (FCFA) :</label>
+            <input type="text" class="form-control" name="price" placeholder="Enter Prix (FCFA)" id="price" required>
         </div>
       </div>
 

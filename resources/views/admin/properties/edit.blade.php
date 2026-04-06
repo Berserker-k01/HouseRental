@@ -10,7 +10,7 @@
 
 <div class="sl-mainpanel">
     <nav class="breadcrumb sl-breadcrumb">
-    <a class="breadcrumb-item" href="#">BariWala</a>
+    <a class="breadcrumb-item" href="#">Tedia-investisment</a>
     <span class="breadcrumb-item active">Edit Property Section</span>
     </nav>
     <div class="sl-pagebody">
@@ -98,12 +98,12 @@
                     <input type="text" class="form-control" name="area" value="{{ $property->area }}" id="bedromm" required>
                 </div>
                 <div class="col-md-4 mb-3 pr-4">
-                    <label for="price">Price (৳) :</label>
-                    <input type="text" class="form-control" name="price" value="{{ $property->price }}" id="price" required>
+                    <label for="price">Prix (FCFA) :</label>
+                    <input type="text" class="form-control" name="price" value="{{ $property->price }} FCFA" id="price" required>
                 </div>
                 <div class="col-md-4 mb-3 pr-4">
-                    <label for="price1">Discount Price (৳) :</label>
-                    <input type="text" class="form-control" name="discount_price" value="{{ $property->discount_price }}" id="price1">
+                    <label for="price1">Discount Prix (FCFA) :</label>
+                    <input type="text" class="form-control" name="discount_price" value="{{ $property->discount_price }} FCFA" id="price1">
                 </div>
             </div>
 
@@ -118,7 +118,7 @@
                 </div>
                 <div class="col-md-4 mb-3 pr-4">
                     <label for="charge">Service Charge :</label>
-                    <input type="text" min="0" class="form-control" name="service_charge" value="{{ $property->service_charge }}" id="charge">
+                    <input type="text" min="0" class="form-control" name="service_charge" value="{{ $property->service_charge }} FCFA" id="charge">
                 </div>
             </div>
 

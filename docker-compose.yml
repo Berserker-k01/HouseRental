@@ -1,0 +1,85 @@
+# Tedia-investisment — stack locale
+# Usage : voir README section Docker ou commandes ci-dessous.
+#
+#   docker compose up -d --build
+#   copy .env.docker.example .env   (ou adapter DB_HOST=mysql dans .env)
+#   docker compose exec app php artisan key:generate
+#   docker compose exec app php artisan migrate
+#   docker compose exec app php artisan storage:link
+#
+# Site : http://localhost:9080 (APP_PORT dans .env si conflit avec une autre app)
+# MySQL : localhost:3307 (user root / mot de passe dans .env)
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tedia_app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_DATABASE: ${DB_DATABASE:-houserental}
+      DB_USERNAME: ${DB_USERNAME:-root}
+      DB_PASSWORD: ${DB_PASSWORD:-secret}
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - tedia
+
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: tedia_nginx
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-9080}:80"
+    volumes:
+      - .:/var/www/html:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    networks:
+      - tedia
+
+  mysql:
+    image: mysql:8.0
+    container_name: tedia_mysql
+    restart: unless-stopped
+    ports:
+      - "${MYSQL_PORT:-3307}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-secret}
+      MYSQL_DATABASE: ${DB_DATABASE:-houserental}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p\"$$MYSQL_ROOT_PASSWORD\" || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+      start_period: 40s
+    networks:
+      - tedia
+
+  node:
+    image: node:18-alpine
+    container_name: tedia_node
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    # Webpack 4 / Laravel Mix 4 needs legacy OpenSSL provider on Node 18
+    command: sh -c "npm install && NODE_OPTIONS=--openssl-legacy-provider npm run dev"
+    networks:
+      - tedia
+
+networks:
+  tedia:
+    driver: bridge
+
+volumes:
+  mysql_data:

@@ -66,7 +66,7 @@
                     <span class="text-muted">150</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                    <span>Total (BDT)</span>
+                    <span>Total (FCFA)</span>
                     <strong>1200 TK</strong>
                 </li>
             </ul>
@@ -124,20 +124,21 @@
 
                 <div class="row">
                     <div class="col-md-5 mb-3">
-                        <label for="country">Country</label>
+                        <label for="country">Pays</label>
                         <select class="custom-select d-block w-100" id="country" required>
-                            <option value="">Choose...</option>
-                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="">Choisir…</option>
+                            <option value="Togo" selected>Togo</option>
                         </select>
                         <div class="invalid-feedback">
-                            Please select a valid country.
+                            Veuillez choisir un pays.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="state">State</label>
+                        <label for="state">Région / ville</label>
                         <select class="custom-select d-block w-100" id="state" required>
-                            <option value="">Choose...</option>
-                            <option value="Dhaka">Dhaka</option>
+                            <option value="">Choisir…</option>
+                            <option value="Lomé">Lomé</option>
+                            <option value="Kara">Kara</option>
                         </select>
                         <div class="invalid-feedback">
                             Please provide a valid state.

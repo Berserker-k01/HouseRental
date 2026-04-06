@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <style>
@@ -27,88 +27,88 @@
 <body>
 
     <table>
-        <caption><h2>Your Property Details</h2></caption>
+        <caption><h2>Récapitulatif de votre annonce</h2></caption>
 
         <tr>
-            <th>Name : </th>
-            <th>{{ $data['name'] }}</th>
+            <th>Nom</th>
+            <th>{{ $info['name'] }}</th>
         </tr>
         <tr>
-            <th>Email : </th>
-            <th>{{ $data['email'] }}</th>
+            <th>E-mail</th>
+            <th>{{ $info['email'] }}</th>
         </tr>
         <tr>
-            <th>Phone : </th>
-            <th>{{ $data['phone'] }}</th>
+            <th>Téléphone</th>
+            <th>{{ $info['phone'] }}</th>
         </tr>
         <tr>
-            <th>Address : </th>
-            <th>{{ $data['address'] }}</th>
+            <th>Adresse</th>
+            <th>{{ $info['address'] }}</th>
         </tr>
 
          <tr>
-            <th>Subcity/Thana : </th>
-            <th>{{ $data['subcity'] }}</th>
+            <th>Quartier / zone</th>
+            <th>{{ $info['subcity'] }}</th>
         </tr>
       <tr>
-          <th>Property Code :</th>
-          <th>{{ $data['property_code'] }}</th>
+          <th>Référence bien</th>
+          <th>{{ $info['property_code'] }}</th>
       </tr>
         <tr>
-            <th>Bedroom : </th>
-            <th>{{ $data['bedroom'] }}</th>
+            <th>Chambres</th>
+            <th>{{ $info['bedroom'] }}</th>
         </tr>
         <tr>
-            <th>Bathroom : </th>
-            <th>{{ $data['bathroom'] }}</th>
+            <th>Salles de bain</th>
+            <th>{{ $info['bathroom'] }}</th>
         </tr>
         <tr>
-            <th>Kitchen : </th>
-            <th>{{ $data['kitchen'] }}</th>
+            <th>Cuisine</th>
+            <th>{{ $info['kitchen'] }}</th>
         </tr>
         <tr>
-            <th>Parking : </th>
-            <th>{{ $data['parking'] }}</th>
+            <th>Parking</th>
+            <th>{{ $info['parking'] }}</th>
         </tr>
         <tr>
-            <th>Type :</th>
-            <th>{{ $data['type'] }}</th>
+            <th>Type</th>
+            <th>{{ $info['type'] }}</th>
         </tr>
         <tr>
-          <th>Area :</th>
-          <th>{{ $data['area'] }}</th>
+          <th>Surface</th>
+          <th>{{ $info['area'] }}</th>
       </tr>
       <tr>
-          <th>Categoty :</th>
-          <th>{{ $data['category'] }}</th>
+          <th>Catégorie</th>
+          <th>{{ $info['category'] }}</th>
       </tr>
       <tr>
-          <th>Purpose :</th>
-          <th>{{ $data['purpose'] }}</th>
+          <th>Objectif (vente / location)</th>
+          <th>{{ $info['purpose'] }}</th>
       </tr>
       <tr>
-          <th>Floor Level :</th>
-          <th>{{ $data['floor'] }}</th>
+          <th>Étage</th>
+          <th>{{ $info['floor'] }}</th>
       </tr>
       <tr>
-          <th>Price :</th>
-          <th>{{ $data['price'] }}</th>
+          <th>Prix</th>
+          <th>{{ $info['price'] }}</th>
       </tr>
       <tr>
-        <th>Video :</th>
-        <th>{{ $data['video'] }}</th>
+        <th>Vidéo</th>
+        <th>{{ $info['video'] }}</th>
     </tr>
     <tr>
-        <th>Month :</th>
-        <th>{{ $data['month'] }}</th>
+        <th>Mois</th>
+        <th>{{ $info['month'] }}</th>
     </tr>
     <tr>
-        <th>Date :</th>
-        <th>{{ $data['date'] }}</th>
+        <th>Date</th>
+        <th>{{ $info['date'] }}</th>
     </tr>
     <tr>
-        <th>Year :</th>
-        <th>{{ $data['year'] }}</th>
+        <th>Année</th>
+        <th>{{ $info['year'] }}</th>
     </tr>
 
     </table>
